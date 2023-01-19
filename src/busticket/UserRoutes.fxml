@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="Dhaka_to_Dinajpur" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.UserRoutesController">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
+         <children>
+            <Text fill="#fc8414" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="97.0" layoutY="456.0" onMouseClicked="#Buses" strokeType="OUTSIDE" strokeWidth="0.0" text="Buses" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="88.0" layoutY="325.0" onMouseClicked="#TicketBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Booking" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#f3933d" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="38.0" layoutY="324.0" size="2em" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="40.0" layoutY="455.0" size="2em" />
+            <Text fill="#fc8414" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="WHITE" glyphName="CIRCLE" layoutX="75.0" layoutY="202.0" size="10em" text="" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+         <children>
+            <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
+         </children></AnchorPane>
+      <Text fill="#fc8414" layoutX="312.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Bus Routes" wrappingWidth="476.4397888183594">
+         <font>
+            <Font name="SansSerif Regular" size="48.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="463.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="437.0" onMouseClicked="#Dhaka_to_Dinajpur" text="Dhaka to Dinajpur" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="512.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="486.0" onMouseClicked="#Dhaka_to_Thakurgaon" text="Dhaka to Thakurgaon" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="559.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="533.0" onMouseClicked="#Dhaka_to_Satkhira" text="Dhaka to Satkhira" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="611.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="585.0" onMouseClicked="#Dhaka_to_Hili" text="Dhaka to Hili" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="662.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="636.0" onMouseClicked="#Dhaka_to_Bandarban" text="Dhaka to Bandarban" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="710.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="684.0" onMouseClicked="#Dhaka_to_Rangamati" text="Dhaka to Rangamati" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="755.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="729.0" onMouseClicked="#Dhaka_to_Kushtia" text="Dhaka to Kushtia" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="465.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="439.0" onMouseClicked="#Dhaka_to_Khulna" text="Dhaka to Khulna" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="514.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="488.0" onMouseClicked="#Dhaka_to_Thakurgaon" text="Dhaka to Thakurgaon" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="561.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="535.0" onMouseClicked="#Dhaka_to_Khagrachari" text="Dhaka to Khagrachari" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="613.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="587.0" onMouseClicked="#Dhaka_to_Rajshahi" text="Dhaka to Rajshahi" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="664.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="638.0" onMouseClicked="#Dhaka_to_Jhenaidah" text="Dhaka to Jhenaidah" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="712.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="686.0" onMouseClicked="#Dhaka_to_Kurigram" text="Dhaka to Kurigram" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="757.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="731.0" onMouseClicked="#Dhaka_to_Darshana" text="Dhaka to Darshana" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="467.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="441.0" onMouseClicked="#Dhaka_to_Rangpur" text="Dhaka to Rangpur" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="516.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="490.0" onMouseClicked="#Dhaka_to_Joypurhat" text="Dhaka to Joypurhat" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="563.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="537.0" onMouseClicked="#Dhaka_to_Gopalganj" text=" Dhaka to Gopalganj" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="615.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="589.0" onMouseClicked="#Dhaka_to_Barisal" text="Dhaka to Barisal" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="666.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="640.0" onMouseClicked="#Dhaka_to_Sreemangal" text="Dhaka to Sreemangal" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="714.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="688.0" onMouseClicked="#Dhaka_to_Jessore" text="Dhaka to Jessore" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="223.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="197.0" onMouseClicked="#Dhaka_to_Teknaf" text=" Dhaka to Teknaf" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="275.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="249.0" onMouseClicked="#Dhaka_to_Chittagong" text="Dhaka to Chittagong" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="326.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="300.0" onMouseClicked="#Dhaka_to_Bogra" text="Dhaka to Bogra" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="374.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="348.0" onMouseClicked="#Dhaka_to_Coxs_Bazar" text="Dhaka to Cox's Bazar" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="344.0" layoutY="419.0" size="2em" />
+      <TextField editable="false" layoutX="380.0" layoutY="393.0" onMouseClicked="#Dhaka_to_Panchagor" text="Dhaka to Panchagor" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="228.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="202.0" onMouseClicked="#Dhaka_to_Kolkata" text="Dhaka to Kolkata" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="280.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="254.0" onMouseClicked="#Dhaka_to_Gaibandha" text="Dhaka to Gaibandha" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="331.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="305.0" onMouseClicked="#Dhaka_to_Nilphamari" text="Dhaka to Nilphamari" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="379.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="353.0" onMouseClicked="#Dhaka_to_Feni" text="Dhaka to Feni" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="598.0" layoutY="424.0" size="2em" />
+      <TextField editable="false" layoutX="634.0" layoutY="398.0" onMouseClicked="#Dhaka_to_Naogaon" text="Dhaka to Naogaon" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="228.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="202.0" onMouseClicked="#Dhaka_to_Chapai_Nawabganj" text="Dhaka to Chapai Nawabganj" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="280.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="254.0" onMouseClicked="#Dhaka_to_Sylhet" text="Dhaka to Sylhet" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="331.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="305.0" onMouseClicked="#Dhaka_to_Moulvibazar" text="Dhaka to Moulvibazar" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="379.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="353.0" onMouseClicked="#Dhaka_to_Nazirhat" text="Dhaka to Nazirhat" />
+      <FontAwesomeIcon glyphName="MAP_MARKER" layoutX="846.0" layoutY="424.0" size="2em" />
+      <TextField editable="false" layoutX="882.0" layoutY="398.0" onMouseClicked="#Dhaka_to_Brahmanbaria" text="Dhaka to Brahmanbaria" />
+   </children>
+</AnchorPane>

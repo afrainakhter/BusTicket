@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.Contact_usController">
+   <children>
+      <ImageView fitHeight="332.0" fitWidth="505.0" layoutX="678.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@contact.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="678.0" layoutY="99.0" prefHeight="265.0" prefWidth="427.0" style="-fx-background-color: #1F618D;">
+         <children>
+            <Text layoutX="56.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for reaching us!We are always happy to hear from you." wrappingWidth="315.3984375">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="87.0" layoutY="99.0" prefHeight="597.0" prefWidth="591.0" style="-fx-background-color: #CACFD2;">
+         <children>
+            <Label layoutX="20.0" layoutY="39.0" prefHeight="27.0" prefWidth="546.0" text="Purpose">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ChoiceBox" layoutX="20.0" layoutY="66.0" onAction="#Select" prefHeight="35.0" prefWidth="546.0" style="-fx-background-color: #ffffff;" />
+            <Label layoutX="20.0" layoutY="121.0" prefHeight="27.0" prefWidth="546.0" text="Your Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="20.0" layoutY="148.0" prefHeight="34.0" prefWidth="546.0" style="-fx-background-color: #ffffff;" />
+            <Label layoutX="20.0" layoutY="201.0" prefHeight="27.0" prefWidth="546.0" text="Your City">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ChoiceBox1" layoutX="20.0" layoutY="228.0" onAction="#Selection" prefHeight="35.0" prefWidth="546.0" style="-fx-background-color: #ffffff;" />
+            <Label layoutX="20.0" layoutY="285.0" prefHeight="27.0" prefWidth="546.0" text="Phone Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="20.0" layoutY="312.0" prefHeight="34.0" prefWidth="546.0" style="-fx-background-color: #ffffff;" />
+            <Label fx:id="label" layoutX="20.0" layoutY="363.0" prefHeight="35.0" prefWidth="546.0" text="Message">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="20.0" layoutY="398.0" prefHeight="176.0" prefWidth="552.0" style="-fx-background-color: #ffffff;" />
+         </children>
+      </AnchorPane>
+      <Hyperlink layoutX="891.0" layoutY="40.0" prefHeight="27.0" prefWidth="82.0" text="About Us">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="1004.0" layoutY="41.0" text="Log out">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Hyperlink>
+      <FontAwesomeIcon glyphName="ARROW_LEFT" layoutX="51.0" layoutY="49.0" onMouseClicked="#BACK" size="2em" />
+   </children>
+</AnchorPane>

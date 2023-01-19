@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="busticket.User_avilable_busOperatorController">
+   <children>
+      <StackPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1202.0">
+         <children>
+            <AnchorPane prefHeight="787.0" prefWidth="1127.0">
+               <children>
+                  <ImageView fitHeight="805.0" fitWidth="1270.0" layoutX="-1.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@main.png" />
+                     </image>
+                  </ImageView>
+                  <ButtonBar layoutX="460.0" layoutY="662.0" prefHeight="40.0" prefWidth="200.0" />
+                  <Label fx:id="From_feild" layoutX="121.0" layoutY="119.0" prefHeight="40.0" prefWidth="354.0" text="AVAILABLE BUS OPERATORS" textFill="#f26914">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#f26914" glyphName="BUS" layoutX="72.0" layoutY="152.0" size="3em" wrappingWidth="37.071428298950195" />
+                  <FontAwesomeIcon fill="#f8f3f3" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="23.0" onMouseClicked="#BACK" size="2em" />
+                  <Line endX="876.0" layoutX="215.0" layoutY="157.0" startX="-100.0" />
+                  <AnchorPane layoutX="109.0" layoutY="215.0" prefHeight="433.0" prefWidth="456.0">
+                     <children>
+                        <Text layoutX="240.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emad Paribahan(Pvt.)Ltd.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="232.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New S.B Super Deluxe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="236.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nabil Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="235.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manik Express">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="238.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M M Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="238.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kanak Paribahan Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="235.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Green Line Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="235.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HIMACHOL">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="236.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hanif Enterprise">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="237.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Islam Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="240.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ena Transport (Pvt) Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="12.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abdullah Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="241.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elish Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="10.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dipjol Enterprise">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="11.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diganta Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="12.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diganta Express">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="11.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dhaka Line">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="13.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comfort Line Pvt Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="13.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chaklader Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="12.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Akota Transport">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="14.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alhamra Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="14.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al-Mobaraka Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="12.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barkat Travels">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="14.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agomony Express">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="624.0" layoutY="229.0" prefHeight="433.0" prefWidth="487.0">
+                     <children>
+                        <Text layoutX="-9.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Royal Coach">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soudia Air Con">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="303.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shyamoli SP">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-10.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shuvo Bosundhara Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-6.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shoukhin Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-9.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shohagh Paribahan">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-6.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sheba Transport">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-8.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saintmartin Paribahan Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-4.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shahzadpur Travels">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-7.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saintmartin Travels">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-2.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sheba Green Line">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-8.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saintmartin Hyundai (Robi Express)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="305.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soudia Coach Service">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="308.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year-71">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="308.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Star Line Special Ltd.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="306.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuba Line">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="308.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisha Group">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="302.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tungipara Express">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="305.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SP Golden Line">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-8.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ranga Provat Paribahan Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-11.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Relax Transport Ltd.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="305.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shyamoli Plus Pvt Ltd">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

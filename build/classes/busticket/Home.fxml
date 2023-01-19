@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.HomeController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #515050;">
+         <children>
+            <ImageView fitHeight="826.0" fitWidth="1275.0" layoutX="-56.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Home.jpg" />
+               </image></ImageView>
+            <Button fx:id="register" layoutX="621.0" layoutY="52.0" mnemonicParsing="false" onAction="#register" prefHeight="35.0" prefWidth="188.0" style="-fx-background-color: White;" text="REGISTER " textFill="#3c1fcc">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="log_In" layoutX="464.0" layoutY="51.0" mnemonicParsing="false" onAction="#log_In" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: white;" text="LOG IN" textFill="#284ecd">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="contact_us" layoutX="912.0" layoutY="52.0" mnemonicParsing="false" onAction="#contact_us" prefHeight="35.0" prefWidth="164.0" style="-fx-background-color: White;" text="CONTACT" textFill="#284ecd">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="about_us" layoutX="780.0" layoutY="52.0" mnemonicParsing="false" onAction="#about_us" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: White;" text="ABOUT " textFill="#284ecd">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.User_MybookingController">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
+         <children>
+            <Text fill="#fc8414" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="90.0" layoutY="499.0" onMouseClicked="#Routes" strokeType="OUTSIDE" strokeWidth="0.0" text="Routes" wrappingWidth="131.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="95.0" layoutY="440.0" onMouseClicked="#Buses" strokeType="OUTSIDE" strokeWidth="0.0" text="Buses" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#fc8414" layoutX="84.0" layoutY="322.0" onMouseClicked="#TicketBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Booking" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#f3933d" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="37.0" layoutY="320.0" size="2em" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="41.0" layoutY="440.0" size="2em" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
+            <Text fill="#fc8414" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="WHITE" glyphName="CIRCLE" layoutX="75.0" layoutY="202.0" size="10em" text="" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+         <children>
+            <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="50.0" layoutY="36.0" onMouseClicked="#Back" size="2em" />
+         </children></AnchorPane>
+      <Label fx:id="WelCome" layoutX="590.0" layoutY="84.0" prefHeight="35.0" prefWidth="209.0" textFill="#21036b">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <TableView layoutX="299.0" layoutY="51.0" prefHeight="739.0" prefWidth="953.0">
+        <columns>
+          <TableColumn prefWidth="142.169921875" text="Bus Name" />
+          <TableColumn prefWidth="98.83004760742188" text="Seats" />
+            <TableColumn prefWidth="72.93118286132812" text="To" />
+            <TableColumn prefWidth="126.98443603515625" text="From" />
+            <TableColumn prefWidth="178.64337158203125" text="Ticket Price" />
+            <TableColumn prefWidth="160.35650634765625" text="Date" />
+            <TableColumn prefWidth="177.35125732421875" text="Time" />
+        </columns>
+      </TableView>
+      
+      
+   </children>
+</AnchorPane>

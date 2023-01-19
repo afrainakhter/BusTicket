@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.AdminLoginController">
+   <children>
+      <AnchorPane prefHeight="444.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="73.0" layoutY="100.0" text="WELCOME ADMIN!" textFill="#27476f">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#2d196f" glyphName="ARROW_LEFT" layoutX="20.0" layoutY="36.0" onMouseClicked="#BACK_HOME" size="2em" wrappingWidth="32.071428298950195" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="403.0" prefHeight="261.0" prefWidth="634.0">
+         <children>
+            <ImageView fitHeight="469.0" fitWidth="480.0" layoutX="46.0" layoutY="-193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Admin_login.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="600.0" prefHeight="802.0" prefWidth="600.0" style="-fx-background-color: #223A5D;">
+         <children>
+            <TextField fx:id="UserNAme" layoutX="222.0" layoutY="267.0" prefHeight="40.0" prefWidth="244.0" promptText="Enter Your Name" />
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="192.0" layoutY="296.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="192.0" layoutY="366.0" size="2em" />
+            <Button layoutX="259.0" layoutY="437.0" mnemonicParsing="false" onAction="#LOGIN" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: WHITE;" text="Login" textFill="#1d0a49">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="Pass" layoutX="222.0" layoutY="336.0" prefHeight="40.0" prefWidth="244.0" promptText="Password" />
+            <Text fill="#f8f1f1" layoutX="197.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN PANEL" wrappingWidth="226.8451107923059">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="WHITE" glyphName="KEY" layoutX="248.0" layoutY="134.0" size="4em" wrappingWidth="11.086420004657612" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

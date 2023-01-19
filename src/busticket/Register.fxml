@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E3F1F4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.RegisterController">
+   <children>
+      <ImageView fitHeight="517.0" fitWidth="527.0" layoutX="73.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/signup%20(2).jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="73.0" layoutY="77.0" prefHeight="247.0" prefWidth="527.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="165.0" layoutY="14.0" prefHeight="70.0" prefWidth="197.0" text="WELCOME TO" textFill="#fc7100">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="61.0" fitWidth="164.0" layoutX="178.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/NAME.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fc7100" layoutX="147.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="'It is Better To Reach Late Than Never'">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="600.0" layoutY="77.0" prefHeight="644.0" prefWidth="520.0" style="-fx-background-color: #B3B6B7;">
+         <children>
+            <Label layoutX="194.0" layoutY="57.0" text="Sign Up" textFill="#fc7100">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FirstName" layoutX="37.0" layoutY="144.0" prefHeight="44.0" prefWidth="216.0" promptText="First Name" />
+            <TextField fx:id="LastName" layoutX="277.0" layoutY="144.0" prefHeight="44.0" prefWidth="216.0" promptText="Last Name" />
+            <TextField fx:id="UserName" layoutX="37.0" layoutY="205.0" prefHeight="44.0" prefWidth="456.0" promptText="User Name" />
+            <PasswordField fx:id="PassWord" layoutX="37.0" layoutY="265.0" prefHeight="44.0" prefWidth="456.0" promptText="Enter Password" />
+            <PasswordField fx:id="ConfirmPass" layoutX="37.0" layoutY="322.0" prefHeight="44.0" prefWidth="456.0" promptText="Confirm Password" />
+            <Button layoutX="198.0" layoutY="527.0" mnemonicParsing="false" onAction="#Register" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #fc7100;" text="REGISTER" textFill="WHITE" />
+            <CheckBox layoutX="37.0" layoutY="491.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="456.0" text="You agree to our Terms and Privacy Policy" />
+            <Text fill="#03384d" layoutX="37.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Hyperlink layoutX="223.0" layoutY="599.0" onAction="#login" text="Login" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="SeqQues" layoutX="38.0" layoutY="380.0" prefHeight="44.0" prefWidth="456.0" promptText="Enter Your Security Question" />
+            <TextField fx:id="Ans" layoutX="37.0" layoutY="435.0" prefHeight="44.0" prefWidth="456.0" promptText="Answer" />
+         </children></AnchorPane>
+      <FontAwesomeIcon fill="ORANGE" glyphName="ARROW_LEFT" layoutX="50.0" layoutY="44.0" onMouseClicked="#Back" size="2em" />
+   </children>
+</AnchorPane>
