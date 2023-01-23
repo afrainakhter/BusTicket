@@ -152,8 +152,8 @@ public class Available_BusController implements Initializable {
                               resultSet.getString("From"),
                         resultSet.getString("To"),
                                 
-                        resultSet.getInt("Ticket_price")
-                                     
+                        resultSet.getInt("Ticket_price"),
+                                     resultSet.getInt("BusID")
                           
                         ));
 
@@ -311,9 +311,9 @@ public class Available_BusController implements Initializable {
         
         }
         
-        bus_Name_show.setText(Bus_name.getCellData(index).toString());
+        bus_Name_show.setText(Bus_name.getCellData(index));
          tic_price_show.setText(Ticket_price.getCellData(index).toString());
-         time_show.setText(Departure_time.getCellData(index).toString());
+         time_show.setText(Departure_time.getCellData(index));
         
     }
 

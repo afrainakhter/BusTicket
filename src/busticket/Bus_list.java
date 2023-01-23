@@ -18,17 +18,31 @@ public class Bus_list {
     String from;
     String to;
     int tik_pri;
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Bus_list(int id) {
+        this.id = id;
+    }
 
     public Bus_list() {
     }
 
-    public Bus_list(String Bus_name, String Dep_time, String Arl_time, String from, String to, int tik_pri) {
+    public Bus_list(String Bus_name, String Dep_time, String Arl_time, String from, String to, int tik_pri,int id) {
         this.Bus_name = Bus_name;
         this.Dep_time = Dep_time;
         this.Arl_time = Arl_time;
         this.from = from;
         this.to = to;
         this.tik_pri = tik_pri;
+         this.id = id;
     }
 
     public String getBus_name() {

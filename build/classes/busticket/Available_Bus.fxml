@@ -67,9 +67,8 @@
                </font>
             </Label>
             <TextField fx:id="Search_bus" layoutX="93.0" layoutY="256.0" prefHeight="40.0" prefWidth="299.0" promptText=" Bus Name" style="-fx-border-color: orange;" />
-            <FontAwesomeIcon fill="#f26914" glyphName="CLOCK" layoutX="979.0" layoutY="283.0" size="1.5em" wrappingWidth="13.071428298950195" />
             <TextField fx:id="Search_bus_ticket" layoutX="411.0" layoutY="256.0" prefHeight="40.0" prefWidth="299.0" promptText="Ticket Price" style="-fx-border-color: orange;" />
-            <TextField fx:id="Search_bus_time" layoutX="736.0" layoutY="256.0" prefHeight="40.0" prefWidth="299.0" promptText="Departure Time" style="-fx-border-color: orange;" />
+            <TextField fx:id="Search_bus_time" layoutX="733.0" layoutY="256.0" prefHeight="40.0" prefWidth="299.0" promptText="Departure Time" style="-fx-border-color: orange;" />
             <FontAwesomeIcon fill="#f26914" glyphName="MONEY" layoutX="679.0" layoutY="283.0" size="1.5em" wrappingWidth="13.071428298950195" />
             <FontAwesomeIcon fill="#f26914" glyphName="BUS" layoutX="367.0" layoutY="283.0" size="1.5em" wrappingWidth="13.071428298950195" />
             <FontAwesomeIcon fill="#f26914" glyphName="CIRCLE" layoutX="1008.0" layoutY="283.0" size="1.5em" wrappingWidth="24.071428298950195" />

@@ -73,7 +73,12 @@ public class Admin_AddBusController implements Initializable {
     private TextField from;
     @FXML
     private TextField to;
-
+    
+int index=-1;
+    @FXML
+    private TableColumn<Bus_list, Integer> ID;
+    @FXML
+    private TextField Bus_ID;
     /**
      * Initializes the controller class.
      */
@@ -93,6 +98,9 @@ public class Admin_AddBusController implements Initializable {
     }
 
     private void intCOl() {
+        
+        
+          ID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         bus_Name.setCellValueFactory(new PropertyValueFactory<>("Bus_name"));
 
@@ -104,6 +112,9 @@ public class Admin_AddBusController implements Initializable {
         From.setCellValueFactory(new PropertyValueFactory<>("from"));
 
         To.setCellValueFactory(new PropertyValueFactory<>("to"));
+
+        
+      
 
     }
 
@@ -129,7 +140,8 @@ public class Admin_AddBusController implements Initializable {
                         resultSet.getString("Arival_time"),
                         resultSet.getString("From"),
                         resultSet.getString("To"),
-                        resultSet.getInt("Ticket_price")
+                        resultSet.getInt("Ticket_price"),
+                         resultSet.getInt("BusID")
                 ));
 
             }
@@ -187,7 +199,7 @@ try{
        psInsert.executeUpdate();
         System.out.println("ADD BUS Done");
 
-        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_AddBus.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -212,5 +224,115 @@ try{
         }
 
     }
+
+    
+       
+    @FXML
+    private void update(ActionEvent event) throws SQLException  {
+        
+       
+        
+       
+try{
+     PreparedStatement psupdate = null;
+      connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+        System.out.println("connected");
+          String busname = BusName.getText();
+        String f = from.getText();
+        String t = to.getText();
+        String tic = Ticket_Price.getText();
+       int ticint = Integer.parseInt(tic);
+        String dep = deptTime.getText();
+        String ari = Arival_time.getText();
+         String id= Bus_ID.getText();
+         
+         int intid=Integer.parseInt(id);
+       
+        String sql= ("UPDATE Bus_list SET  `Bus_Name`='"+busname+"',`From`='"+f+"',`To`='"+t+"',`Ticket_price`='"+ticint+"',`Departure_time`='"+dep+"',`Arival_time`='"+ari +"'  WHERE (`BusID`='"+intid+"')");
+         psupdate =connection.prepareStatement(sql);
+         psupdate.execute();
+         
+         System.out.println("UPDATE BUS Done");
+
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_AddBus.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
+
+         
+} catch(Exception e){
+
+e.printStackTrace();}
+        
+        
+    }
+
+    @FXML
+    private void getSelected(MouseEvent event) {
+        
+        index=  Bus_Table.getSelectionModel().getSelectedIndex();
+        if (index<=-1){
+        
+            return ;
+        
+        }
+        
+         Bus_ID.setText(ID.getCellData(index).toString());
+        
+       
+        BusName.setText(bus_Name.getCellData(index));
+        from.setText( From.getCellData(index));
+        to.setText(To.getCellData(index));
+       Ticket_Price.setText( Ticket.getCellData(index).toString());
+        Arival_time.setText( Ari_time.getCellData(index));
+        deptTime.setText(  Dep_time.getCellData(index));
+        
+                 
+      
+        
+          
+         
+    }
+
+    @FXML
+    private void delete(ActionEvent event) throws SQLException, IOException {
+        
+     
+         Connection connection;
+
+        PreparedStatement psdelete= null;
+
+        
+       
+        
+        //Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+        System.out.println("connected");
+   try{
+       
+        String id= Bus_ID.getText();
+         
+         int intid=Integer.parseInt(id);
+       psdelete = connection.prepareStatement("DELETE FROM Bus_list  WHERE BusID=?");
+        psdelete.setInt(1,intid );
+        
+         psdelete.execute();
+         System.out.println("delete bus successful");
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_AddBus.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }catch(SQLException e){
+        
+        e.printStackTrace();
+    }}
 
 }

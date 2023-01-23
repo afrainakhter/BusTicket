@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/Admin.java</file>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/RegisterController.java</file>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/SeatController.java</file>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/ADDBUS_ADMINController.java</file>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/PaymentController.java</file>
-            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/BusTicket.java</file>
+            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/PaySlip.jrxml</file>
+            <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/Payment_successfullController.java</file>
             <file>file:/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/Admin_AddBusController.java</file>
         </group>
     </open-files>

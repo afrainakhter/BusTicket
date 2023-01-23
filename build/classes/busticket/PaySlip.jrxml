@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7a79db9-3ee5-487e-8354-40526400bd03">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     Booking_history_A.`Customer_ID` AS Booking_history_A_Customer_ID,
+     Booking_history_A.`First_Name` AS Booking_history_A_First_Name,
+     Booking_history_A.`Last_Name` AS Booking_history_A_Last_Name,
+     Booking_history_A.`Bus_name` AS Booking_history_A_Bus_name,
+     Booking_history_A.`Date` AS Booking_history_A_Date,
+     Booking_history_A.`Time` AS Booking_history_A_Time,
+     Booking_history_A.`Seat` AS Booking_history_A_Seat,
+     
+     Booking_history_A.`Total_Amount` AS Booking_history_A_Total_Amount
+FROM
+     `Booking_history` Booking_history_A]]>
+	</queryString>
+	<field name="Customer_ID" class="java.lang.Integer"/>
+	<field name="First_Name" class="java.lang.String"/>
+	<field name="Last_Name" class="java.lang.String"/>
+	<field name="Bus_name" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Time" class="java.lang.String"/>
+	<field name="Seat" class="java.lang.String"/>
+	<field name="Total_Amount" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="151" y="14" width="209" height="39" uuid="075fcffa-2428-4371-9507-579dd4a3b675"/>
+				<textElement textAlignment="Center">
+					<font size="30" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Cash Receipt]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="30" width="52" height="20" uuid="babf2974-c44e-457e-a6ca-6b7754529318"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ID                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="30" width="55" height="20" uuid="00b1127d-a219-4b08-b000-79d623344187"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[First Name  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="30" width="46" height="20" uuid="21096d67-5442-4bbe-9bd4-b85f093e8da1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ Bus Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="30" width="44" height="20" uuid="56f8213a-49d0-418d-8467-cd41e1f44f5f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="30" width="48" height="20" uuid="70dc0ddb-9951-4164-9fe8-4a720177ead1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Last Name  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="30" width="48" height="20" uuid="9f05474e-db21-42f8-abef-2ae35b2f2226"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Seat Name: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="30" width="48" height="20" uuid="3a9c735b-a050-4514-b1ea-f88b0deec502"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Time  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="30" width="99" height="20" uuid="af7d7447-eea6-40fc-9650-15cdcb78d797"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="251" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="3" width="52" height="20" uuid="4df8b126-e3b1-493f-ad33-7880699bbae9"/>
+				<textFieldExpression><![CDATA[$F{Customer_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="55" height="23" uuid="900c6ac8-79e8-4bcd-88fc-eb8593e68ef2"/>
+				<textFieldExpression><![CDATA[$F{First_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="53" height="20" uuid="0d58705b-7721-4793-b79d-83cdd80fbaba"/>
+				<textFieldExpression><![CDATA[$F{Last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="3" width="46" height="20" uuid="3caff701-f654-405d-a80a-abc0176a15fc"/>
+				<textFieldExpression><![CDATA[$F{Bus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="0" width="66" height="20" uuid="d95f9a0d-8dad-48a2-96e3-68376070942d"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="3" width="48" height="17" uuid="a6288b8a-610d-4c3a-b0bc-797ce19ab137"/>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="48" height="20" uuid="0cad26e3-a2f8-43e1-8de8-1ddef87ed6e2"/>
+				<textFieldExpression><![CDATA[$F{Seat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="3" width="100" height="20" uuid="639cc3bf-d73e-4e27-849c-1a6c2544571f"/>
+				<textFieldExpression><![CDATA[$F{Total_Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
