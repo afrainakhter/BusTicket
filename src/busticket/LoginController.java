@@ -50,6 +50,7 @@ public class LoginController implements Initializable {
     private void LOGIN(ActionEvent event) throws ClassNotFoundException, SQLException, Exception {
 
         String u = UserNAme.getText();
+      
         
         String p = Pass.getText();
         if (u.equals("") && p.equals("")) {

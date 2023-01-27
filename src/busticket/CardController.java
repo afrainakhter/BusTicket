@@ -16,6 +16,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -28,9 +31,17 @@ import javafx.stage.Stage;
 public class CardController implements Initializable {
 
     @FXML
-    private AnchorPane Dhaka_to_Dinajpur;
-    @FXML
     private FontAwesomeIcon Back;
+    @FXML
+    private TextField Card_no;
+    @FXML
+    private PasswordField seqcode;
+    @FXML
+    private TextField Tickiet_price;
+    @FXML
+    private TextField total_amount;
+    @FXML
+    private DatePicker enpdate;
 
     /**
      * Initializes the controller class.
@@ -65,6 +76,34 @@ public class CardController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
+    }
+
+    @FXML
+    private void bkash(MouseEvent event) throws IOException {
+        
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Bkash.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Payment Page");
+        stage.setScene(scene);
+        stage.show();
+        
+        
+    }
+    
+    
+    public void ticprice(String ticprice){
+    
+        Tickiet_price.setText(ticprice);
+    
+    }
+    
+    public void totalPrice(String totalprice){
+    
+       total_amount.setText(totalprice);
+    
     }
     
 }

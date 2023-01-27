@@ -264,7 +264,7 @@ public class Available_BusController implements Initializable {
     }
 
     @FXML
-    private void Chose_seat(ActionEvent event) throws IOException {
+    private void Chose_seat(ActionEvent event) throws IOException, SQLException {
        
         String from = From_feild.getText();
         String to = To_feild.getText();
@@ -286,7 +286,7 @@ public class Available_BusController implements Initializable {
         seat.Bus_name(bus);
         seat.show_TPrice(tic_price);
         seat.Dept_time(departure_time);
-        
+        seat.getred();
         
         
         Scene scene = new Scene(root);

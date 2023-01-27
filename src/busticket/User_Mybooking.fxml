@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.User_MybookingController">
    <children>
-      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
+      <AnchorPane layoutX="-6.0" layoutY="-2.0" prefHeight="803.0" prefWidth="248.0" style="-fx-background-color: #f4f6f8;">
          <children>
             <Text fill="#fc8414" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
                <font>
@@ -51,24 +51,24 @@
             <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
             <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
          </children></AnchorPane>
-      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+      <AnchorPane layoutX="-30.0" layoutY="-10.0" prefHeight="53.0" prefWidth="1299.0" style="-fx-background-color: #f3933d;">
          <children>
             <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="50.0" layoutY="36.0" onMouseClicked="#Back" size="2em" />
+            <Label fx:id="User_Name" layoutX="1097.0" layoutY="9.0" prefHeight="26.0" prefWidth="167.0" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
-      <Label fx:id="WelCome" layoutX="590.0" layoutY="84.0" prefHeight="35.0" prefWidth="209.0" textFill="#21036b">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
-      <TableView layoutX="299.0" layoutY="51.0" prefHeight="739.0" prefWidth="953.0">
+      <TableView fx:id="userbook_table" layoutX="228.0" layoutY="45.0" prefHeight="745.0" prefWidth="1040.0">
         <columns>
-          <TableColumn prefWidth="142.169921875" text="Bus Name" />
-          <TableColumn prefWidth="98.83004760742188" text="Seats" />
-            <TableColumn prefWidth="72.93118286132812" text="To" />
-            <TableColumn prefWidth="126.98443603515625" text="From" />
-            <TableColumn prefWidth="178.64337158203125" text="Ticket Price" />
-            <TableColumn prefWidth="160.35650634765625" text="Date" />
-            <TableColumn prefWidth="177.35125732421875" text="Time" />
+          <TableColumn fx:id="busname" prefWidth="132.50701904296875" text="Bus Name" />
+          <TableColumn fx:id="seats" prefWidth="105.49301147460938" text="Seats" />
+            <TableColumn fx:id="to" prefWidth="97.9267578125" text="To" />
+            <TableColumn fx:id="from" prefWidth="151.52947998046875" text="From" />
+            <TableColumn fx:id="total_price" prefWidth="174.1915283203125" text="Total Price" />
+            <TableColumn fx:id="date" prefWidth="164.05914306640625" text="Date" />
+            <TableColumn fx:id="time" prefWidth="215.62542724609375" text="Time" />
         </columns>
       </TableView>
       

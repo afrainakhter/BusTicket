@@ -8,6 +8,11 @@ package busticket;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +35,12 @@ public class UserDashBoardController implements Initializable {
     private Label WelCome;
     @FXML
     private FontAwesomeIcon Back;
+     Connection connection = null;
+
+    PreparedStatement preparedStatement = null;
+
+    ResultSet resultSet = null;
+    
 
     /**
      * Initializes the controller class.
@@ -57,7 +68,7 @@ public class UserDashBoardController implements Initializable {
     @FXML
     private void Routes(MouseEvent event) throws IOException {
         
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserRoutes.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserRoutes.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -127,9 +138,21 @@ public class UserDashBoardController implements Initializable {
     }
 
     @FXML
-    private void MyBooking(MouseEvent event) throws IOException {
+    private void MyBooking(MouseEvent event) throws IOException, ClassNotFoundException, SQLException {
+         
+        String u=WelCome.getText();
+         
+        
+        
+        
          FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("User_Mybooking.fxml"));
         Parent root = fxmlLoader.load();
+        
+        
+        
+         User_MybookingController mybooking=fxmlLoader.getController();
+         mybooking.user_name(u);
+         mybooking.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Book Your ticket");
@@ -137,9 +160,9 @@ public class UserDashBoardController implements Initializable {
         stage.show();
 
 
+          }
         
-        
-    }
+    
     
      public void displayName(String Name) {
 

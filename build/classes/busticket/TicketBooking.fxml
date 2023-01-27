@@ -34,14 +34,14 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="to" layoutX="639.0" layoutY="59.0" onMouseClicked="#BACK" prefHeight="741.0" prefWidth="561.0">
+            <AnchorPane fx:id="to" layoutX="639.0" layoutY="59.0" prefHeight="741.0" prefWidth="561.0">
                <children>
                   <Label layoutX="133.0" layoutY="378.0" prefHeight="27.0" prefWidth="97.0" text="To:">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button layoutX="197.0" layoutY="536.0" mnemonicParsing="false" onAction="#CheckAvility" prefHeight="51.0" prefWidth="255.0" style="-fx-background-color: #ea5e12;" text="CHECK AVILITY" textFill="WHITE">
+                  <Button layoutX="197.0" layoutY="536.0" mnemonicParsing="false" onAction="#CheckAvility" prefHeight="51.0" prefWidth="255.0" style="-fx-background-color: #ea5e12;" text="CHECK AVAILABILITY" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

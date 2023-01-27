@@ -44,7 +44,7 @@ public class Admin implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Admin Login");
         stage.setScene(scene);
         stage.show();
         
@@ -74,7 +74,7 @@ public class Admin implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Add Bus");
         stage.setScene(scene);
         stage.show();
     }
@@ -87,7 +87,7 @@ public class Admin implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Customers");
         stage.setScene(scene);
         stage.show();
         
@@ -100,7 +100,7 @@ public class Admin implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Routes");
         stage.setScene(scene);
         stage.show();
          
@@ -120,7 +120,7 @@ public class Admin implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Earning");
         stage.setScene(scene);
         stage.show();
         

@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="801.0" fitWidth="1208.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="809.0" fitWidth="1235.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@main.png" />
                </image>
@@ -41,7 +41,7 @@
                   <Button fx:id="a1" layoutX="311.0" layoutY="244.0" mnemonicParsing="false" onAction="#A1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="A1" textFill="WHITE" />
                   <Button fx:id="B1" layoutX="360.0" layoutY="244.0" mnemonicParsing="false" onAction="#B1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="B1" textFill="#f8f4f4" />
                   <Button fx:id="C1" layoutX="404.0" layoutY="244.0" mnemonicParsing="false" onAction="#C1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="C1" textFill="#fff9f9" />
-                  <Button fx:id="D1" layoutX="452.0" layoutY="244.0" mnemonicParsing="false" onAction="#D3" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="D1" textFill="#fffbfb" />
+                  <Button fx:id="D1" layoutX="452.0" layoutY="244.0" mnemonicParsing="false" onAction="#D1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="D1" textFill="#fffbfb" />
                   <Button fx:id="E1" layoutX="498.0" layoutY="244.0" mnemonicParsing="false" onAction="#E1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="E1" textFill="#fffefe" />
                   <Button fx:id="F1" layoutX="547.0" layoutY="245.0" mnemonicParsing="false" onAction="#F1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="F1" textFill="WHITE" />
                   <Button fx:id="G1" layoutX="596.0" layoutY="244.0" mnemonicParsing="false" onAction="#G1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="G1" textFill="#f8f4f4" />
@@ -49,7 +49,7 @@
                   <Button fx:id="I1" layoutX="700.0" layoutY="245.0" mnemonicParsing="false" onAction="#I1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="I1" textFill="#fffbfb" />
                   <Button fx:id="J1" layoutX="752.0" layoutY="245.0" mnemonicParsing="false" onAction="#J1" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="J1" textFill="#fffefe" />
                   <Button fx:id="a2" layoutX="311.0" layoutY="207.0" mnemonicParsing="false" onAction="#A2" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="A2" textFill="WHITE" />
-                  <Button fx:id="B2" layoutX="361.0" layoutY="207.0" mnemonicParsing="false" onAction="#B3" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="B2" textFill="#f8f4f4" />
+                  <Button fx:id="B2" layoutX="361.0" layoutY="207.0" mnemonicParsing="false" onAction="#B2" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="B2" textFill="#f8f4f4" />
                   <Button fx:id="C2" layoutX="404.0" layoutY="207.0" mnemonicParsing="false" onAction="#C2" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="C2" textFill="#fff9f9" />
                   <Button fx:id="D2" layoutX="452.0" layoutY="206.0" mnemonicParsing="false" onAction="#D2" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="D2" textFill="#fffbfb" />
                   <Button fx:id="E2" layoutX="498.0" layoutY="207.0" mnemonicParsing="false" onAction="#E2" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="E2" textFill="#fffefe" />
@@ -84,16 +84,16 @@
                   <Button fx:id="K4" layoutX="812.0" layoutY="121.0" mnemonicParsing="false" onAction="#K4" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="K4" textFill="#fffefe" />
                   <Button fx:id="K5" layoutX="815.0" layoutY="81.0" mnemonicParsing="false" onAction="#K5" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="K5" textFill="#fffefe" />
                   <Button fx:id="K3" layoutX="812.0" layoutY="166.0" mnemonicParsing="false" onAction="#K3" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ff7b08;" text="K3" textFill="WHITE" />
-                  <Button layoutX="934.0" layoutY="335.0" mnemonicParsing="false" onAction="#Payment" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #ff7b08;" text="PAYMENT" textFill="#fffefe">
+                  <Button layoutX="934.0" layoutY="335.0" mnemonicParsing="false" onAction="#Payment" prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: AF3A3D;" text="PAYMENT" textFill="#fffefe">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="-7.0" layoutY="49.0" prefHeight="342.0" prefWidth="1213.0" style="-fx-background-color: White;">
+            <AnchorPane layoutY="49.0" prefHeight="342.0" prefWidth="1213.0" style="-fx-background-color: White;">
                <children>
-                  <Label layoutX="36.0" layoutY="328.0" prefHeight="44.0" prefWidth="245.0" text="SELECTED SEATS  :">
+                  <Label layoutX="36.0" layoutY="328.0" prefHeight="44.0" prefWidth="245.0" text="SELECTED SEATS  :" textFill="#af3a3d">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -173,10 +173,18 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="BOOK" layoutX="623.0" layoutY="187.0" mnemonicParsing="false" onAction="#BOOK" prefHeight="33.0" prefWidth="124.0" style="-fx-background-color: #ff7b08;" text="Book" textFill="WHITE" />
-                  <Button fx:id="Cancle" layoutX="794.0" layoutY="186.0" mnemonicParsing="false" onAction="#Cancle" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #ff7b08;" text="Cancel" textFill="#fffdfd" />
-                  <Button fx:id="Reset" layoutX="624.0" layoutY="253.0" mnemonicParsing="false" onAction="#Reset" prefHeight="33.0" prefWidth="128.0" style="-fx-background-color: #ff7b08;" text="Reset" textFill="#f5ecec" />
-                  <Button fx:id="Refresh" layoutX="791.0" layoutY="253.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #ff7b08;" text="Refresh" textFill="WHITE" />
+                  <Button fx:id="BOOK" layoutX="581.0" layoutY="235.0" mnemonicParsing="false" onAction="#BOOK" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: GREEN;" text="Book" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="Cancle" layoutX="901.0" layoutY="235.0" mnemonicParsing="false" onAction="#Cancle" prefHeight="44.0" prefWidth="132.0" style="-fx-background-color: AF3A3D;" text="Cancel" textFill="#fffdfd">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="reset" layoutX="749.0" layoutY="235.0" mnemonicParsing="false" onAction="#Reset" prefHeight="45.0" prefWidth="132.0" style="-fx-background-color: #ff7b08;" text="Reset" textFill="#f5ecec">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                   <Label fx:id="No_of_Seat" layoutX="717.0" layoutY="99.0" prefHeight="30.0" prefWidth="132.0">
                      <font>
                         <Font size="18.0" />
@@ -187,6 +195,9 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <FontAwesomeIcon fill="#fcf9f9" glyphName="CHECK_CIRCLE" layoutX="587.0" layoutY="266.0" size="2em" />
+                  <FontAwesomeIcon fill="#fcfcfc" glyphName="REFRESH" layoutX="760.0" layoutY="266.0" size="2em" />
+                  <FontAwesomeIcon fill="#f5eded" glyphName="TRASH" layoutX="905.0" layoutY="266.0" size="2em" />
                </children>
             </AnchorPane>
             <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="23.0" layoutY="26.0" onMouseClicked="#Back" />

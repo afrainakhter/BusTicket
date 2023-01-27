@@ -47,6 +47,8 @@ public class PaymentController implements Initializable {
     @FXML
     private Label Amount;
     String m;
+    @FXML
+    private TextField Total_Price;
 
     /**
      * Initializes the controller class.
@@ -66,6 +68,8 @@ public class PaymentController implements Initializable {
         String l = LastName.getText();
         String e = Email.getText();
         String mobile = Mobile.getText();
+        
+        String total =Total_Price.getText();
         Connection con;
         PreparedStatement psInsert = null;
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
@@ -83,6 +87,14 @@ public class PaymentController implements Initializable {
 
             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Card.fxml"));
             Parent root = fxmlLoader.load();
+            
+            
+            CardController card=fxmlLoader.getController();
+        
+        
+        // card.ticprice(tic_price);
+        
+        card.totalPrice(total);
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Sign up Page");
@@ -126,6 +138,12 @@ public class PaymentController implements Initializable {
         stage.setTitle("Sign up Page");
         stage.setScene(scene);
         stage.show();
+    }
+    
+    public void totalPrice(String totalprice){
+    
+       Total_Price.setText(totalprice);
+    
     }
 
 }

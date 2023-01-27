@@ -48,11 +48,6 @@
             <TextField fx:id="LastName" layoutX="889.0" layoutY="247.0" prefHeight="46.0" prefWidth="288.0" />
             <TextField fx:id="Email" layoutX="889.0" layoutY="371.0" prefHeight="47.0" prefWidth="288.0" />
             <ComboBox fx:id="Payment" layoutX="889.0" layoutY="437.0" prefHeight="47.0" prefWidth="288.0" style="-fx-background-color: #FDAB45;" />
-            <Label fx:id="Amount" layoutX="686.0" layoutY="81.0" prefHeight="68.0" prefWidth="419.0" text="SELECT YOUR PAYMENT METHOD" textFill="#2b298d">
-               <font>
-                  <Font name="SansSerif Regular" size="24.0" />
-               </font></Label>
-            <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="21.0" layoutY="30.0" onMouseClicked="#Back" size="2em" />
             <AnchorPane layoutX="-11.0" layoutY="9.0" prefHeight="798.0" prefWidth="667.0">
                <children>
                   <ImageView fitHeight="530.0" fitWidth="636.0" layoutX="13.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
@@ -62,7 +57,22 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="-2.0" layoutY="-12.0" prefHeight="67.0" prefWidth="1205.0" style="-fx-background-color: #FDAB45;" />
+            <AnchorPane layoutX="-2.0" layoutY="-12.0" prefHeight="67.0" prefWidth="1205.0" style="-fx-background-color: #FDAB45;">
+               <children>
+                  <Label fx:id="Amount" layoutX="474.0" layoutY="4.0" prefHeight="68.0" prefWidth="419.0" text="SELECT YOUR PAYMENT METHOD" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="47.0" onMouseClicked="#Back" size="2em" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="653.0" layoutY="125.0" prefHeight="46.0" prefWidth="182.0" text="Your Total Price:" textFill="#2b298d">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Total_Price" layoutX="889.0" layoutY="125.0" prefHeight="46.0" prefWidth="288.0" />
          </children>
       </AnchorPane>
    </children>

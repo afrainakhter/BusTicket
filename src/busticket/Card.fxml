@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="Dhaka_to_Dinajpur" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.CardController">
+<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.CardController">
    <children>
       <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
          <children>
@@ -22,7 +22,7 @@
                   <Image url="@bkash.png" />
                </image>
             </ImageView>
-            <Label layoutX="123.0" layoutY="426.0" text="Bkash" textFill="#fc8414">
+            <Label layoutX="123.0" layoutY="426.0" onMouseClicked="#bkash" text="Bkash" textFill="#fc8414">
                <font>
                   <Font size="38.0" />
                </font>
@@ -46,17 +46,17 @@
       <Label layoutX="374.0" layoutY="390.0" text="Security Code" />
       <Label layoutX="374.0" layoutY="594.0" text="Expiry Date" />
       <Label layoutX="374.0" layoutY="525.0" text="Payment Amount" />
-      <TextField layoutX="532.0" layoutY="318.0" prefHeight="31.0" prefWidth="577.0" />
-      <PasswordField layoutX="532.0" layoutY="385.0" prefHeight="31.0" prefWidth="577.0" />
-      <TextField layoutX="532.0" layoutY="456.0" prefHeight="31.0" prefWidth="577.0" />
-      <TextField layoutX="532.0" layoutY="520.0" prefHeight="31.0" prefWidth="577.0" />
+      <TextField fx:id="Card_no" layoutX="532.0" layoutY="318.0" prefHeight="31.0" prefWidth="577.0" />
+      <PasswordField fx:id="seqcode" layoutX="532.0" layoutY="385.0" prefHeight="31.0" prefWidth="577.0" />
+      <TextField fx:id="Tickiet_price" layoutX="532.0" layoutY="456.0" prefHeight="31.0" prefWidth="577.0" />
+      <TextField fx:id="total_amount" layoutX="532.0" layoutY="520.0" prefHeight="31.0" prefWidth="577.0" />
       <Button layoutX="754.0" layoutY="693.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #f3933d;" text="Submit" />
       <ImageView fitHeight="54.0" fitWidth="98.0" layoutX="823.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@visa.png" />
          </image>
       </ImageView>
-      <DatePicker layoutX="523.0" layoutY="589.0" prefHeight="31.0" prefWidth="577.0" />
+      <DatePicker fx:id="enpdate" layoutX="523.0" layoutY="589.0" prefHeight="31.0" prefWidth="577.0" />
       <Label layoutX="374.0" layoutY="461.0" text="Ticket Price" />
    </children>
 </AnchorPane>
