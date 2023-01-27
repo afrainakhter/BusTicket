@@ -190,8 +190,7 @@ public class SeatController implements Initializable {
             seatcountK4 = 0, seatcountK5 = 0, seatcountL = 0;
 
     //Seat color 
-    String yellow = "-fx-background-color:#ffb805";
-    String red = "-fx-background-color:red";
+   String red = "-fx-background-color:red";
     String green = "-fx-background-color:#39FF14";
     String orange = "-fx-background-color:#ff7b08";
 
@@ -4328,10 +4327,13 @@ public class SeatController implements Initializable {
 
             resultSet = ps.executeQuery();
 
+            
             while (resultSet.next()) {
                 list.add(resultSet.getInt(1));
 
             }
+            
+            
             if (list.get(0) == 1) {
                 a1.setStyle("-fx-background-color:red");
             }
