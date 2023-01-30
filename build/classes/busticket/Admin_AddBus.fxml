@@ -39,7 +39,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" wrappingWidth="195.3090564608574">
+            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>

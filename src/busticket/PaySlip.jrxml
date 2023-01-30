@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<style name="style1"/>
 	<queryString>
 		<![CDATA[SELECT
      Booking_history_A.`Customer_ID` AS Booking_history_A_Customer_ID,
@@ -31,7 +32,7 @@ FROM
 	<title>
 		<band height="116" splitType="Stretch">
 			<staticText>
-				<reportElement x="151" y="14" width="209" height="39" uuid="075fcffa-2428-4371-9507-579dd4a3b675"/>
+				<reportElement x="151" y="14" width="209" height="39" forecolor="#FF6633" uuid="075fcffa-2428-4371-9507-579dd4a3b675"/>
 				<textElement textAlignment="Center">
 					<font size="30" isBold="true" isStrikeThrough="false"/>
 				</textElement>
@@ -105,7 +106,7 @@ FROM
 	<detail>
 		<band height="251" splitType="Stretch">
 			<textField>
-				<reportElement x="3" y="3" width="52" height="20" uuid="4df8b126-e3b1-493f-ad33-7880699bbae9"/>
+				<reportElement x="3" y="3" width="52" height="20" backcolor="#FF6600" uuid="4df8b126-e3b1-493f-ad33-7880699bbae9"/>
 				<textFieldExpression><![CDATA[$F{Customer_ID}]]></textFieldExpression>
 			</textField>
 			<textField>

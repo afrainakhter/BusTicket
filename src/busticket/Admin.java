@@ -110,7 +110,22 @@ public class Admin implements Initializable {
    
 
     @FXML
-    private void Report(MouseEvent event) {
+    private void Report(MouseEvent event) throws IOException {
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Report.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Routes");
+        stage.setScene(scene);
+        stage.show();
+        
+        
+        
+        
+        
+        
+        
     }
 
     @FXML
@@ -127,7 +142,17 @@ public class Admin implements Initializable {
     }
 
     @FXML
-    private void Booking(MouseEvent event) {
+    private void Booking(MouseEvent event) throws IOException {
+            FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_bookings.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
+        
+        
+        
     }
 
    

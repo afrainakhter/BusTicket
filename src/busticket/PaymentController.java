@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package busticket;
 
 import java.io.IOException;
@@ -49,6 +45,22 @@ public class PaymentController implements Initializable {
     String m;
     @FXML
     private TextField Total_Price;
+    @FXML
+    private Label user_name;
+    @FXML
+    private Label TO;
+    @FXML
+    private Label date;
+    @FXML
+    private Label From;
+    @FXML
+    private Label no_of_Seat;
+    @FXML
+    private Label time;
+    @FXML
+    private Label Busname;
+    @FXML
+    private Label tic;
 
     /**
      * Initializes the controller class.
@@ -64,22 +76,53 @@ public class PaymentController implements Initializable {
     @FXML
     private void Procced_to_pay_button(ActionEvent event) throws IOException, SQLException {
 
+        
+           
+        
+        
+        
+        
         String F = FirstName.getText();
         String l = LastName.getText();
         String e = Email.getText();
         String mobile = Mobile.getText();
         
         String total =Total_Price.getText();
+        
+        String from= From.getText();
+        String to = TO.getText();
+        String bus = Busname.getText();
+        String d = date.getText();
+        
+        String t =time.getText();
+        
+         String u =user_name.getText();
+         String s=no_of_Seat.getText();
+         String tic_price=tic.getText();
+         
         Connection con;
+        try{
         PreparedStatement psInsert = null;
+        
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
         System.out.println("Connected");
 
-        psInsert = con.prepareStatement("INSERT INTO Payment (FirstName,Last_name,MoblieNo,Email)VALUES(?,?,?,?)");
+        psInsert = con.prepareStatement("INSERT INTO Booking_history (`First_Name`,`Last_Name`,`Bus_name`,`Date`,`Time`,`Seat`,`Total_Amount`,`User_name`,`Mobile_No`,`E-mail`,`From_bus`,`To_bus`)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
         psInsert.setString(1, F);
         psInsert.setString(2, l);
-        psInsert.setString(3, e);
-        psInsert.setString(4, mobile);
+        psInsert.setString(3, bus);
+        psInsert.setString(4, d);
+         psInsert.setString(5, t);
+          psInsert.setString(6, s);
+        psInsert.setString(7 ,total);
+        psInsert.setString(8, u);
+        psInsert.setString(9,mobile);
+         psInsert.setString(10, e);
+          psInsert.setString(11, from);
+        psInsert.setString(12, to);
+        
+         
+        
         psInsert.executeUpdate();
         m = Payment.getSelectionModel().getSelectedItem().toString();
 
@@ -89,12 +132,22 @@ public class PaymentController implements Initializable {
             Parent root = fxmlLoader.load();
             
             
+        
             CardController card=fxmlLoader.getController();
-        
-        
+            
         // card.ticprice(tic_price);
         
-        card.totalPrice(total);
+        
+        
+            card.totalPrice(total);
+            card.busTO(to);
+            card.busfrom(from);
+            card.username(u);
+            card.date(d);
+            card.bus(bus);
+            card.time(t);
+            card.seat(s);
+            card.ticprice(tic_price);
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Sign up Page");
@@ -103,14 +156,22 @@ public class PaymentController implements Initializable {
 
         } else {
 
+            
             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Bkash.fxml"));
             Parent root = fxmlLoader.load();
+             BkashController bkash =fxmlLoader.getController();
+             bkash.totalPrice(total);
+            
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Sign up Page");
             stage.setScene(scene);
             stage.show();
 
+        }}
+        catch(SQLException yu){
+            yu.printStackTrace();
+        
         }
 
     }
@@ -129,10 +190,34 @@ public class PaymentController implements Initializable {
     }
 
     @FXML
-    private void Back(MouseEvent event) throws IOException {
+    private void Back(MouseEvent event) throws IOException, SQLException {
 
+        String from=From.getText();
+        String to=TO.getText();
+        String d=date.getText();
+        String b=Busname.getText();
+        String tic_price=tic.getText();
+        String u=user_name.getText();
+        String departure_time=time.getText();
+        String s=no_of_Seat.getText();  
+                
+        
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Seat.fxml"));
         Parent root = fxmlLoader.load();
+        
+         SeatController seat = fxmlLoader.getController();
+
+        seat.show_PlaceName_from(from);
+        seat.show_PlaceName_to(to);
+        seat.show_date(d);
+        seat.Bus_name(b);
+        seat.show_TPrice(tic_price);
+        seat.Dept_time(departure_time);
+        seat.username(u);
+        seat.no_of_seat(s);
+        seat.getred();
+       
+        
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Sign up Page");
@@ -145,5 +230,51 @@ public class PaymentController implements Initializable {
        Total_Price.setText(totalprice);
     
     }
+    
+    public void user_name(String name){
+    
+      user_name.setText(name);
+    
+    }
+    
+    public void F(String from){
+    
+      From.setText(from);
+    
+    }
+    
+    public void To(String to){
+    
+      TO.setText(to);
+    
+    }
+    
+    public void date(String datE){
+    
+    date.setText(datE);
+    
+    }
+    public void Time(String t){
+    
+      time.setText(t);
+    
+    }
+    public void Seat(String seat){
+    
+      no_of_Seat.setText(seat);
+    
+    }
+    
+     public void bus(String b){
+    
+      Busname.setText(b);
+    
+    }
+     
+     public void tic(String T){
+     
+     tic.setText(T);
+     
+     }
 
 }

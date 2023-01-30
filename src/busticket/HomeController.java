@@ -66,6 +66,9 @@ public class HomeController implements Initializable {
         Parent root = loader.load();
         
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("home.css").toExternalForm());
+       
+        
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("Login");

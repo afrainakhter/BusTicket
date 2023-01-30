@@ -190,7 +190,7 @@ public class SeatController implements Initializable {
             seatcountK4 = 0, seatcountK5 = 0, seatcountL = 0;
 
     //Seat color 
-   String red = "-fx-background-color:red";
+    String red = "-fx-background-color:red";
     String green = "-fx-background-color:#39FF14";
     String orange = "-fx-background-color:#ff7b08";
 
@@ -198,6 +198,8 @@ public class SeatController implements Initializable {
     ArrayList<Integer> list4 = new ArrayList<>();
     ArrayList<Integer> list1 = new ArrayList<>();
     ArrayList<Integer> list6 = new ArrayList<>();
+    @FXML
+    private Label Username;
 
     /**
      * Initializes the controller class.
@@ -3487,6 +3489,16 @@ public class SeatController implements Initializable {
 
     @FXML
     private void Payment(ActionEvent event) throws IOException {
+       
+        
+        String from=Place_name.getText();
+         String to=Place_name2.getText();
+          String d=Date.getText();
+          
+           String b=Bus_name.getText();
+            String t=Dept_time.getText();
+        
+        String u= Username.getText();
 
         String tic_price = Ticket_price.getText();
         String res = No_of_Seat.getText();
@@ -3501,19 +3513,28 @@ public class SeatController implements Initializable {
 
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Payment.fxml"));
         Parent root = fxmlLoader.load();
-        selection();
+         selection();
+        
         PaymentController pay = fxmlLoader.getController();
+        
+        
         pay.totalPrice(total);
-
+        pay.user_name(u);
+        pay.F(from);
+        pay.To(to);
+        pay.Seat(res);
+        pay.Time(t);
+        pay.bus(b);
+        pay.date(d);
+        pay.tic(tic_price);
+        
+        
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Payment Page");
         stage.setScene(scene);
         stage.show();
 
-        //CardController card=fxmlLoader.getController();
-        // card.ticprice(tic_price);
-        // card.totalPrice(total);
     }
 
     public void show_PlaceName_from(String name) {
@@ -3558,12 +3579,45 @@ public class SeatController implements Initializable {
         Ari_time.setText(ariTime);
 
     }
+    
+    public void username(String name) {
+
+       Username.setText(name);
+
+    }
+    
+    
+    
+    public void no_of_seat(String n) {
+
+       No_of_Seat.setText(n);
+
+    }
+    
+    
+    
+    
+    
 
     @FXML
     private void Back(MouseEvent event) throws IOException {
 
+        String u=Username.getText();
+        String s1=Place_name.getText();
+        String  s2=Place_name2.getText();
+        String date=  Date.getText();
+
+          
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Available_Bus.fxml"));
         Parent root = fxmlLoader.load();
+        
+        Available_BusController available_BusController =fxmlLoader.getController();
+        available_BusController.username(u);
+        available_BusController.show_PlaceName_from(s1);
+        available_BusController.show_PlaceName_to(s2);
+        available_BusController.show_date(date.toString());
+
+        
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Available Bus");
@@ -3593,14 +3647,14 @@ public class SeatController implements Initializable {
     @FXML
     private void Cancle(ActionEvent event) throws SQLException, IOException {
 
-//         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
-//        Parent root = fxmlLoader.load();
-//        Scene scene = new Scene(root);
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        stage.setTitle("Available Bus");
-//        stage.setScene(scene);
-//        stage.show();
-//        
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home page");
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
     @FXML
@@ -3765,93 +3819,118 @@ public class SeatController implements Initializable {
                 seatcountF4 = 0;
                 F4.setStyle(orange);
             }
+            if (list.get(24) == 0) {
+                btg1 = false;
+                seatcountG1 = 0;
+                G1.setStyle(orange);
+            }
 
-//        btg1 = false;
-//        seatcountG1 = 0;
-//        G1.setStyle(orange);
-//
-//        btg2 = false;
-//        seatcountG1 = 0;
-//        G2.setStyle(orange);
-//
-//        btg3 = false;
-//        seatcountG3 = 0;
-//        G3.setStyle(orange);
-//
-//        btg4 = false;
-//        seatcountG4 = 0;
-//        G4.setStyle(orange);
-//
-//        bth1 = false;
-//        seatcountH1 = 0;
-//        H1.setStyle(orange);
-//
-//        bth2 = false;
-//        seatcountE1 = 0;
-//        H2.setStyle(orange);
-//
-//        bth3 = false;
-//        seatcountH3 = 0;
-//        H3.setStyle(orange);
-//
-//        bth4 = false;
-//        seatcountH4 = 0;
-//        H4.setStyle(orange);
-//
-//        bti1 = false;
-//        seatcountI1 = 0;
-//        I1.setStyle(orange);
-//
-//        bti2 = false;
-//        seatcountI1 = 0;
-//        I2.setStyle(orange);
-//
-//        bti3 = false;
-//        seatcountI3 = 0;
-//        I3.setStyle(orange);
-//
-//        bti4 = false;
-//        seatcountI4 = 0;
-//        I4.setStyle(orange);
-//
-//        btj1 = false;
-//        seatcountJ1 = 0;
-//        J1.setStyle(orange);
-//
-//        btj2 = false;
-//        seatcountJ1 = 0;
-//        J2.setStyle(orange);
-//
-//        btj3 = false;
-//        seatcountJ3 = 0;
-//        J3.setStyle(orange);
-//
-//        btj4 = false;
-//        seatcountJ4 = 0;
-//        J4.setStyle(orange);
-//
-//        btk1 = false;
-//        seatcountK1 = 0;
-//        K1.setStyle(orange);
-//
-//        btk2 = false;
-//        seatcountK1 = 0;
-//        K2.setStyle(orange);
-//
-//        btk3 = false;
-//        seatcountK3 = 0;
-//        K3.setStyle(orange);
-//
-//        btk4 = false;
-//        seatcountK4 = 0;
-//        K4.setStyle(orange);
-//
-//        btk5 = false;
-//        seatcountK5 = 0;
-//        K5.setStyle(orange);
-//        btl = false;
-//        seatcountL = 0;
-//        L.setStyle(orange);
+            if (list.get(25) == 0) {
+
+                btg2 = false;
+                seatcountG1 = 0;
+                G2.setStyle(orange);
+            }
+            if (list.get(26) == 0) {
+                btg3 = false;
+                seatcountG3 = 0;
+                G3.setStyle(orange);
+            }
+            if (list.get(27) == 0) {
+                btg4 = false;
+                seatcountG4 = 0;
+                G4.setStyle(orange);
+            }
+            if (list.get(28) == 0) {
+                bth1 = false;
+                seatcountH1 = 0;
+                H1.setStyle(orange);
+            }
+            if (list.get(29) == 0) {
+                bth2 = false;
+                seatcountE1 = 0;
+                H2.setStyle(orange);
+            }
+            if (list.get(30) == 0) {
+                bth3 = false;
+                seatcountH3 = 0;
+                H3.setStyle(orange);
+            }
+            if (list.get(31) == 0) {
+                bth4 = false;
+                seatcountH4 = 0;
+                H4.setStyle(orange);
+            }
+            if (list.get(32) == 0) {
+                bti1 = false;
+                seatcountI1 = 0;
+                I1.setStyle(orange);
+            }
+            if (list.get(33) == 0) {
+                bti2 = false;
+                seatcountI1 = 0;
+                I2.setStyle(orange);
+            }
+            if (list.get(34) == 0) {
+                bti3 = false;
+                seatcountI3 = 0;
+                I3.setStyle(orange);
+            }
+            if (list.get(35) == 0) {
+                bti4 = false;
+                seatcountI4 = 0;
+                I4.setStyle(orange);
+            }
+            if (list.get(36) == 0) {
+                btj1 = false;
+                seatcountJ1 = 0;
+                J1.setStyle(orange);
+            }
+            if (list.get(37) == 0) {
+                btj2 = false;
+                seatcountJ1 = 0;
+                J2.setStyle(orange);
+            }
+            if (list.get(38) == 0) {
+                btj3 = false;
+                seatcountJ3 = 0;
+                J3.setStyle(orange);
+            }
+            if (list.get(39) == 0) {
+                btj4 = false;
+                seatcountJ4 = 0;
+                J4.setStyle(orange);
+            }
+            if (list.get(40) == 0) {
+                btk1 = false;
+                seatcountK1 = 0;
+                K1.setStyle(orange);
+            }
+            if (list.get(41) == 0) {
+                btk2 = false;
+                seatcountK1 = 0;
+                K2.setStyle(orange);
+            }
+            if (list.get(42) == 0) {
+                btk3 = false;
+                seatcountK3 = 0;
+                K3.setStyle(orange);
+            }
+            if (list.get(43) == 0) {
+                btk4 = false;
+                seatcountK4 = 0;
+                K4.setStyle(orange);
+            }
+            if (list.get(44) == 0) {
+                btk5 = false;
+                seatcountK5 = 0;
+                K5.setStyle(orange);
+            }
+            if (list.get(45) == 0) {
+                btl = false;
+                seatcountL = 0;
+                L.setStyle(orange);
+            }
         });
 
     }
@@ -3926,7 +4005,7 @@ public class SeatController implements Initializable {
                 PreparedStatement ps = connection
                         .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='C2' and busname='" + busName + "'");
                 ps.executeUpdate();
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -4011,7 +4090,7 @@ public class SeatController implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
 
-            }
+            }}
             if (btd4) {
                 try {
                     PreparedStatement ps = connection
@@ -4111,7 +4190,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btg3) {
+            }
+            if (btg3) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='G3' and busname='" + busName + "'");
@@ -4119,7 +4199,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btg4) {
+            }
+            if (btg4) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='G4' and busname='" + busName + "'");
@@ -4128,7 +4209,7 @@ public class SeatController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            
+
             if (bth1) {
                 try {
                     PreparedStatement ps = connection
@@ -4147,7 +4228,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (bth3) {
+            }
+            if (bth3) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='H3' and busname='" + busName + "'");
@@ -4155,17 +4237,17 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (bth4) {
+            }
+            if (bth4) {
                 try {
                     PreparedStatement ps = connection
-                            .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='h4' and busname='" + busName + "'");
+                            .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='H4' and busname='" + busName + "'");
                     ps.executeUpdate();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-            
-            
+
             if (bti1) {
                 try {
                     PreparedStatement ps = connection
@@ -4184,7 +4266,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (bti3) {
+            }
+            if (bti3) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='I3' and busname='" + busName + "'");
@@ -4192,7 +4275,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (bti4) {
+            }
+            if (bti4) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='I4' and busname='" + busName + "'");
@@ -4201,7 +4285,7 @@ public class SeatController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            
+
             if (btj1) {
                 try {
                     PreparedStatement ps = connection
@@ -4220,7 +4304,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btj3) {
+            }
+            if (btj3) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='J3' and busname='" + busName + "'");
@@ -4228,7 +4313,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btj4) {
+            }
+            if (btj4) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='J4' and busname='" + busName + "'");
@@ -4237,9 +4323,7 @@ public class SeatController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            
-            
-            
+
             if (btk1) {
                 try {
                     PreparedStatement ps = connection
@@ -4258,7 +4342,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btk3) {
+            }
+            if (btk3) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='K3' and busname='" + busName + "'");
@@ -4266,7 +4351,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btk4) {
+            }
+            if (btk4) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='K4' and busname='" + busName + "'");
@@ -4275,7 +4361,7 @@ public class SeatController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            
+
             if (btk5) {
                 try {
                     PreparedStatement ps = connection
@@ -4284,7 +4370,8 @@ public class SeatController implements Initializable {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }if (btl) {
+            }
+            if (btl) {
                 try {
                     PreparedStatement ps = connection
                             .prepareStatement("UPDATE Seat SET count = 1 WHERE SeatName='L' and busname='" + busName + "'");
@@ -4293,11 +4380,8 @@ public class SeatController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            
-            
-            
-            
-        }
+
+        
     }
 
     public void getred() throws SQLException {
@@ -4327,13 +4411,11 @@ public class SeatController implements Initializable {
 
             resultSet = ps.executeQuery();
 
-            
             while (resultSet.next()) {
                 list.add(resultSet.getInt(1));
 
             }
-            
-            
+
             if (list.get(0) == 1) {
                 a1.setStyle("-fx-background-color:red");
             }
@@ -4419,102 +4501,102 @@ public class SeatController implements Initializable {
                 F3.setStyle("-fx-background-color:red");
 
             }
-            
-             if (list.get(23) == 1) {
-                F3.setStyle("-fx-background-color:red");
+
+            if (list.get(23) == 1) {
+                F4.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(24) == 1) {
+            if (list.get(24) == 1) {
                 G1.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(25) == 1) {
+            if (list.get(25) == 1) {
                 G2.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(26) == 1) {
+            if (list.get(26) == 1) {
                 G3.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(27) == 1) {
+            if (list.get(27) == 1) {
                 G4.setStyle("-fx-background-color:red");
 
             }
-             
-             if (list.get(28) == 1) {
+
+            if (list.get(28) == 1) {
                 H1.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(29) == 1) {
+            if (list.get(29) == 1) {
                 H2.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(30) == 1) {
+            if (list.get(30) == 1) {
                 H3.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(31) == 1) {
+            if (list.get(31) == 1) {
                 H4.setStyle("-fx-background-color:red");
 
             }
-             
-             if (list.get(32) == 1) {
+
+            if (list.get(32) == 1) {
                 I1.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(33) == 1) {
+            if (list.get(33) == 1) {
                 I2.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(34) == 1) {
+            if (list.get(34) == 1) {
                 I3.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(35) == 1) {
+            if (list.get(35) == 1) {
                 I4.setStyle("-fx-background-color:red");
 
             }
-             
-             if (list.get(36) == 1) {
+
+            if (list.get(36) == 1) {
                 J1.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(37) == 1) {
+            if (list.get(37) == 1) {
                 J2.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(38) == 1) {
+            if (list.get(38) == 1) {
                 J3.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(39) == 1) {
+            if (list.get(39) == 1) {
                 J4.setStyle("-fx-background-color:red");
 
-             }
-             if (list.get(40) == 1) {
+            }
+            if (list.get(40) == 1) {
                 K1.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(41) == 1) {
+            if (list.get(41) == 1) {
                 K2.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(42) == 1) {
+            if (list.get(42) == 1) {
                 K3.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(43) == 1) {
+            if (list.get(43) == 1) {
                 K4.setStyle("-fx-background-color:red");
 
             }
-             if (list.get(44) == 1) {
+            if (list.get(44) == 1) {
                 K5.setStyle("-fx-background-color:red");
 
-            }if (list.get(45) == 1) {
+            }
+            if (list.get(45) == 1) {
                 L.setStyle("-fx-background-color:red");
 
             }
-             
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -57,12 +57,13 @@
       <AnchorPane layoutX="276.0" layoutY="-3.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;" />
       <TableView fx:id="Customer_table" layoutX="293.0" layoutY="73.0" prefHeight="732.0" prefWidth="962.0" style="-fx-border-color: orange; -fx-border-width: 7; -fx-background-color: ash;">
         <columns>
-          <TableColumn fx:id="ID" prefWidth="97.0" style="-fx-background-color: white;" text="Customer  ID" />
-          <TableColumn fx:id="Name" prefWidth="209.2406005859375" style="-fx-background-color: white;" text="Name" />
-            <TableColumn fx:id="UserName" prefWidth="229.49072265625" style="-fx-background-color: white;" text="User Name" />
-            <TableColumn fx:id="Phone_no" prefWidth="179.67333984375" style="-fx-background-color: white;" text="Phone Number" />
-            <TableColumn fx:id="Email" prefWidth="233.0" style="-fx-background-color: white; -fx-text-color: orange;" text="E-mail" />
-            <TableColumn prefWidth="17.0" style="-fx-background-color: white;" />
+          <TableColumn fx:id="ID" prefWidth="97.0" text="Customer  ID" />
+          <TableColumn fx:id="Name" prefWidth="136.0" text="Name" />
+            <TableColumn fx:id="UserName" prefWidth="188.0" text="User Name" />
+            <TableColumn fx:id="Phone_no" prefWidth="152.0" text="Phone Number" />
+            <TableColumn fx:id="Email" prefWidth="135.0" text="E-mail" />
+            <TableColumn fx:id="city" prefWidth="118.0" text="City" />
+            <TableColumn fx:id="div" prefWidth="118.0" text="Division" />
         </columns>
       </TableView>
    </children>

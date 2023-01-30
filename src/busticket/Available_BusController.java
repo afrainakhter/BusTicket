@@ -78,9 +78,10 @@ public class Available_BusController implements Initializable {
     private TextField tic_price_show;
     @FXML
     private TextField time_show;
-    
-    
+
     Integer index;
+    @FXML
+    private Label user_name;
 
     /**
      * Initializes the controller class.
@@ -131,32 +132,24 @@ public class Available_BusController implements Initializable {
         System.out.println("conected");
 
         try {
-            
+
             // String UserTo=To_feild.getText();
             preparedStatement = connection.prepareStatement("Select * From Bus_list");
-       
+
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-               // String Datato=resultSet.getString("To");
-                
-            
-             
+                // String Datato=resultSet.getString("To");
 
-               
-                             Bus_List.add(new Bus_list(
-                        
+                Bus_List.add(new Bus_list(
                         resultSet.getString("Bus_Name"),
                         resultSet.getString("Departure_time"),
                         resultSet.getString("Arival_time"),
-                              resultSet.getString("From"),
+                        resultSet.getString("From"),
                         resultSet.getString("To"),
-                                
                         resultSet.getInt("Ticket_price"),
-                                     resultSet.getInt("BusID")
-                          
-                        ));
-
+                        resultSet.getInt("BusID")
+                ));
 
             }
         } catch (SQLException throwables) {
@@ -164,13 +157,11 @@ public class Available_BusController implements Initializable {
             throwables.printStackTrace();
 
         }
-      
-   Bus_ListTable.setItems(Bus_List);
+
+        Bus_ListTable.setItems(Bus_List);
     }
 
     /*       Data SEARCH in Table Function       */
-    
-    
     private void searchBY_BusProperty() {
 
         Bus_ListTable.setItems(Bus_List);
@@ -265,14 +256,14 @@ public class Available_BusController implements Initializable {
 
     @FXML
     private void Chose_seat(ActionEvent event) throws IOException, SQLException {
-       
+
         String from = From_feild.getText();
         String to = To_feild.getText();
         String date = Date_feild.getText();
-        String bus=bus_Name_show.getText();
-        String tic_price= tic_price_show.getText();
-        String departure_time= time_show.getText();
-        
+        String b = bus_Name_show.getText();
+        String tic_price = tic_price_show.getText();
+        String departure_time = time_show.getText();
+        String u = user_name.getText();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Seat.fxml"));
         Parent root = loader.load();
@@ -283,12 +274,13 @@ public class Available_BusController implements Initializable {
         seat.show_PlaceName_from(from);
         seat.show_PlaceName_to(to);
         seat.show_date(date);
-        seat.Bus_name(bus);
+        seat.Bus_name(b);
         seat.show_TPrice(tic_price);
         seat.Dept_time(departure_time);
+        seat.username(u);
+
         seat.getred();
-        
-        
+
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -296,41 +288,43 @@ public class Available_BusController implements Initializable {
         stage.show();
 
     }
-    
 
     @FXML
     private void Clicked(MouseEvent event) {
-        
-        
+
         System.out.println("Clicked");
-        
-        
-        index= Bus_ListTable.getSelectionModel().getSelectedIndex();
-        if(index<=-1){
-         return;
-        
+
+        index = Bus_ListTable.getSelectionModel().getSelectedIndex();
+        if (index <= -1) {
+            return;
+
         }
-        
+
         bus_Name_show.setText(Bus_name.getCellData(index));
-         tic_price_show.setText(Ticket_price.getCellData(index).toString());
-         time_show.setText(Departure_time.getCellData(index));
-        
+        tic_price_show.setText(Ticket_price.getCellData(index).toString());
+        time_show.setText(Departure_time.getCellData(index));
+
     }
 
     @FXML
     private void BACK(MouseEvent event) throws IOException {
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("TicketBooking.fxml"));
+        String u= user_name.getText();
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("TicketBooking.fxml"));
         Parent root = fxmlLoader.load();
+        
+        TicketBookingController tic=fxmlLoader.getController();
+        tic.username(u);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("TICKET BOOKING");
         stage.setScene(scene);
         stage.show();
-        
-        
+
     }
-    
-    
+
+    public void username(String name) {
+        user_name.setText(name);
+
+    }
 
 }

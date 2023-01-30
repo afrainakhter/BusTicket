@@ -265,9 +265,12 @@ public class User_MybookingController implements Initializable {
 
     @FXML
     private void Back(MouseEvent event) throws IOException {
-
+        String u=User_Name.getText();
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         Parent root = fxmlLoader.load();
+        
+         UserDashBoardController user=fxmlLoader.getController();
+        user.displayName(u);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Dash Board");

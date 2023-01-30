@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.Admin_earning">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.Admin_earning">
    <children>
       <AnchorPane id="AnchorPane" layoutY="-1.0" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: #D8DFE7;">
          <children>
@@ -40,7 +39,7 @@
                         <Font size="30.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="90.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" wrappingWidth="195.3090564608574">
+                  <Text fill="WHITE" layoutX="90.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
                      <font>
                         <Font size="30.0" />
                      </font>

@@ -30,6 +30,8 @@ public class BusTicket extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
         Parent root=fxmlLoader.load();
         Scene scene = new Scene(root);
+        
+        scene.getStylesheets().add(getClass().getResource("home.css").toExternalForm());
         Stage.setTitle("Home Page");
        Stage.setScene(scene);
        Stage.show();

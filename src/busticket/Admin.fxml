@@ -35,7 +35,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" onMouseClicked="#Customer" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" wrappingWidth="195.3090564608574">
+            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" onMouseClicked="#Customer" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
@@ -45,7 +45,7 @@
             <FontAwesomeIcon fill="#f8f4f4" glyphName="TICKET" layoutX="38.0" layoutY="357.0" size="2em" />
             <FontAwesomeIcon fill="#f8f7f7" glyphName="BUS" layoutX="40.0" layoutY="414.0" size="2em" />
             <FontAwesomeIcon fill="#fcf3f3" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
-            <Text fill="WHITE" layoutX="88.0" layoutY="553.0" onMouseClicked="#Report" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" wrappingWidth="131.30908203125">
+            <Text fill="WHITE" layoutX="88.0" layoutY="553.0" onMouseClicked="#Report" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews" wrappingWidth="131.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
@@ -62,7 +62,7 @@
       <AnchorPane layoutX="276.0" layoutY="-3.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;" />
       <AnchorPane layoutX="327.0" layoutY="213.0" onMouseClicked="#Customer" prefHeight="177.0" prefWidth="288.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="66.0" prefWidth="296.0" style="-fx-background-color: #fc7100;" text="CUSTOMERS" textAlignment="CENTER" textFill="#fffdfa">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="66.0" prefWidth="296.0" styleClass="Label" stylesheets="@admin.css" text="Users" textAlignment="CENTER" textFill="#fffdfa">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -72,7 +72,7 @@
       </AnchorPane>
       <AnchorPane layoutX="637.0" layoutY="216.0" onMouseClicked="#Booking" prefHeight="170.0" prefWidth="280.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="59.0" prefWidth="284.0" style="-fx-background-color: #fc7100;" text="BOOKINGS" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="59.0" prefWidth="284.0" styleClass="Label" stylesheets="@admin.css" text="BOOKINGS" textAlignment="CENTER" textFill="#f8f3f3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -82,7 +82,7 @@
       </AnchorPane>
       <AnchorPane layoutX="322.0" layoutY="431.0" onMouseClicked="#AddBus" prefHeight="170.0" prefWidth="290.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="298.0" style="-fx-background-color: #fc7100;" text="Add Bus" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="298.0" styleClass="Label" stylesheets="@admin.css" text="Add Bus" textAlignment="CENTER" textFill="#f8f3f3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -92,7 +92,7 @@
       </AnchorPane>
       <AnchorPane layoutX="634.0" layoutY="431.0" onMouseClicked="#Route" prefHeight="170.0" prefWidth="290.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="290.0" style="-fx-background-color: #fc7100;" text="ROUTES" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="290.0" styleClass="Label" stylesheets="@admin.css" text="ROUTES" textAlignment="CENTER" textFill="#f8f3f3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -102,7 +102,7 @@
       </AnchorPane>
       <AnchorPane layoutX="938.0" layoutY="219.0" onMouseClicked="#Earning" prefHeight="169.0" prefWidth="282.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="57.0" prefWidth="283.0" style="-fx-background-color: #fc7100;" text="EARNING" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="57.0" prefWidth="283.0" styleClass="Label" stylesheets="@admin.css" text="EARNING" textAlignment="CENTER" textFill="#f8f3f3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
@@ -112,7 +112,7 @@
       </AnchorPane>
       <AnchorPane layoutX="936.0" layoutY="428.0" onMouseClicked="#Report" prefHeight="170.0" prefWidth="290.0" style="-fx-background-color: white;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="61.0" prefWidth="290.0" style="-fx-background-color: #fc7100;" text="REPORTS" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="61.0" prefWidth="290.0" styleClass="Label" stylesheets="@admin.css" text="REVIEWS" textAlignment="CENTER" textFill="#f8f3f3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>

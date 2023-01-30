@@ -151,6 +151,8 @@ public class LoginController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("AdminLogin.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("admin.css").toExternalForm());
+       
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Sign up Page");
         stage.setScene(scene);

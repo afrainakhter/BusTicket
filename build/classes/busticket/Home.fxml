@@ -1,36 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.HomeController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="1323.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.HomeController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #515050;">
+      <AnchorPane prefHeight="819.0" prefWidth="1285.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fitHeight="826.0" fitWidth="1275.0" layoutX="-56.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Home.jpg" />
-               </image></ImageView>
-            <Button fx:id="register" layoutX="621.0" layoutY="52.0" mnemonicParsing="false" onAction="#register" prefHeight="35.0" prefWidth="188.0" style="-fx-background-color: White;" text="REGISTER " textFill="#3c1fcc">
+            <AnchorPane layoutX="402.0" layoutY="-17.0" prefHeight="844.0" prefWidth="830.0">
+               <children>
+                  <ImageView fitHeight="847.0" fitWidth="928.0" layoutX="7.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@new.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="log_In" cancelButton="true" layoutX="300.0" layoutY="61.0" mnemonicParsing="false" onAction="#log_In" prefHeight="45.0" prefWidth="126.0" stylesheets="@home.css" text="Login" textFill="#372986">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="contact_us" cancelButton="true" layoutX="768.0" layoutY="60.0" mnemonicParsing="false" onAction="#contact_us" prefHeight="43.0" prefWidth="143.0" stylesheets="@home.css" text="Contact " textFill="#372986">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="about_us" cancelButton="true" layoutX="617.0" layoutY="60.0" mnemonicParsing="false" onAction="#about_us" prefHeight="45.0" prefWidth="113.0" stylesheets="@home.css" text="About" textFill="#372986">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="register" cancelButton="true" layoutX="468.0" layoutY="61.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="126.0" stylesheets="@home.css" text="Register" textFill="#372986">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="300.0" layoutY="200.0" prefHeight="69.0" prefWidth="376.0" text="BUS TICKET" textFill="#ff6f00">
                <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <Button fx:id="log_In" layoutX="464.0" layoutY="51.0" mnemonicParsing="false" onAction="#log_In" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: white;" text="LOG IN" textFill="#284ecd">
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#101297" glyphName="SQUARE" layoutX="46.0" layoutY="64.0" size="3em" />
+            <FontAwesomeIcon fill="#ff5201" glyphName="SQUARE" layoutX="56.0" layoutY="74.0" size="3em" />
+            <Label layoutX="35.0" layoutY="197.0" prefHeight="69.0" prefWidth="255.0" text="NIRAPOD |" textFill="#101e6b">
                <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <Button fx:id="contact_us" layoutX="912.0" layoutY="52.0" mnemonicParsing="false" onAction="#contact_us" prefHeight="35.0" prefWidth="164.0" style="-fx-background-color: White;" text="CONTACT" textFill="#284ecd">
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="289.0" prefHeight="69.0" prefWidth="471.0" text="ONLINE SERVICE" textFill="#101e6b">
                <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <Button fx:id="about_us" layoutX="780.0" layoutY="52.0" mnemonicParsing="false" onAction="#about_us" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: White;" text="ABOUT " textFill="#284ecd">
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Text layoutX="34.0" layoutY="381.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus tickets can be purchased using this website. Making people's lives easier is the primary mission of our service. Bus schedules and ticket reservations are hassle-free for everybody. Anyone can conduct a bus search and easily purchase a ticket." wrappingWidth="424.95416259765625">
                <font>
-                  <Font size="18.0" />
-               </font></Button>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>

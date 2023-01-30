@@ -20,7 +20,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
+            <Text fill="#fc8414" layoutX="97.0" layoutY="392.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
@@ -30,20 +30,20 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <FontAwesomeIcon fill="#f3933d" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="38.0" layoutY="324.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="40.0" layoutY="455.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="TICKET" layoutX="38.0" layoutY="324.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="HISTORY" layoutX="40.0" layoutY="389.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="BUS" layoutX="40.0" layoutY="455.0" size="2em" />
             <Text fill="#fc8414" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
             <FontAwesomeIcon fill="WHITE" glyphName="CIRCLE" layoutX="75.0" layoutY="202.0" size="10em" text="" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
          </children></AnchorPane>
-      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #ea5e12;">
          <children>
             <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
          </children></AnchorPane>

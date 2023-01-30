@@ -11,49 +11,65 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="Dhaka_to_Dinajpur" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.BkashController">
+<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.BkashController">
    <children>
       <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <FontAwesomeIcon fill="#f3933d" glyphName="MONEY" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#ff0e92" glyphName="MONEY" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
             <ImageView fitHeight="40.0" fitWidth="49.0" layoutX="51.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@visa.png" />
                </image>
             </ImageView>
-            <Label layoutX="125.0" layoutY="361.0" onMouseClicked="#Card" text="Visa" textFill="#fc8414">
+            <Label layoutX="125.0" layoutY="361.0" onMouseClicked="#Card" text="Visa" textFill="#220c7a">
                <font>
                   <Font size="38.0" />
                </font>
             </Label>
          </children></AnchorPane>
-      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #ff0e92;">
          <children>
             <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
          </children></AnchorPane>
-      <Text fill="#fc8414" layoutX="378.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAY ONLINE WITH" wrappingWidth="476.4397888183594">
+      <Text fill="#ff0e92" layoutX="378.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAY ONLINE WITH" wrappingWidth="476.4397888183594">
          <font>
             <Font name="SansSerif Regular" size="48.0" />
          </font>
       </Text>
-      <ImageView fitHeight="70.0" fitWidth="59.0" layoutX="854.0" layoutY="124.0" onMouseClicked="#bkash" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="70.0" fitWidth="59.0" layoutX="854.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bkash.png" />
          </image>
       </ImageView>
-      <Text fill="#fc8414" layoutX="957.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BKASH" wrappingWidth="177.43978881835938">
+      <Text fill="#ff0e92" layoutX="957.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BKASH" wrappingWidth="177.43978881835938">
          <font>
             <Font name="SansSerif Regular" size="48.0" />
          </font>
       </Text>
-      <Label layoutX="374.0" layoutY="323.0" text="Mobile Number" />
-      <Label layoutX="374.0" layoutY="390.0" text="Pin Number" />
-      <Label layoutX="374.0" layoutY="461.0" text="Ticket Price" />
-      <Label layoutX="374.0" layoutY="525.0" text="Payment Amount" />
-      <TextField layoutX="532.0" layoutY="318.0" prefHeight="31.0" prefWidth="577.0" />
-      <PasswordField layoutX="532.0" layoutY="385.0" prefHeight="31.0" prefWidth="577.0" />
-      <TextField layoutX="532.0" layoutY="456.0" prefHeight="31.0" prefWidth="577.0" />
-      <TextField layoutX="532.0" layoutY="520.0" prefHeight="31.0" prefWidth="577.0" />
-      <Button layoutX="756.0" layoutY="615.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #f3933d;" text="Submit" />
+      <Label layoutX="374.0" layoutY="323.0" prefWidth="131.0" text="Bkash Number :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="380.0" layoutY="387.0" prefHeight="23.0" prefWidth="119.0" text="Pin Number :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="369.0" layoutY="456.0" prefHeight="23.0" prefWidth="144.0" text="Payment Amount :">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="bkash_no" layoutX="532.0" layoutY="318.0" prefHeight="31.0" prefWidth="577.0" />
+      <PasswordField fx:id="pin_no" layoutX="532.0" layoutY="385.0" prefHeight="31.0" prefWidth="577.0" />
+      <TextField fx:id="total_amount" layoutX="532.0" layoutY="449.0" prefHeight="31.0" prefWidth="577.0" />
+      <Button layoutX="757.0" layoutY="557.0" mnemonicParsing="false" onAction="#submit" prefHeight="36.0" prefWidth="144.0" style="-fx-background-color: #ff0e92;" text="Submit" textFill="#fcfcfc">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Label fx:id="to" layoutX="440.0" layoutY="741.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
+      <Label fx:id="From" layoutX="509.0" layoutY="676.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
+      <Label fx:id="date" layoutX="352.0" layoutY="676.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
+      <Label fx:id="busname" layoutX="533.0" layoutY="741.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
+      <Label fx:id="time" layoutX="473.0" layoutY="684.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
+      <Label fx:id="seat" layoutX="488.0" layoutY="645.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
    </children>
 </AnchorPane>

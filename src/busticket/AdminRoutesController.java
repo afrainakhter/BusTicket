@@ -44,18 +44,41 @@ public class AdminRoutesController implements Initializable {
     }    
 
     @FXML
-    private void DashBoard(MouseEvent event) {
+    private void DashBoard(MouseEvent event) throws IOException {
         
+          
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
         
     }
 
     @FXML
-    private void Route(MouseEvent event) {
+    private void Route(MouseEvent event) throws IOException {
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("AdminRoutes.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Routes");
+        stage.setScene(scene);
+        stage.show();
+         
         
     }
 
     @FXML
-    private void AddBus(MouseEvent event) {
+    private void AddBus(MouseEvent event) throws IOException {  
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_AddBus.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
         
         
     }
@@ -67,11 +90,28 @@ public class AdminRoutesController implements Initializable {
     }
 
     @FXML
-    private void Customer(MouseEvent event) {
+    private void Customer(MouseEvent event) throws IOException {
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Customer.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Customers");
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
     @FXML
-    private void Report(MouseEvent event) {
+    private void Report(MouseEvent event) throws IOException {
+        
+          
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Report.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -88,7 +128,15 @@ public class AdminRoutesController implements Initializable {
     }
 
     @FXML
-    private void Earning(MouseEvent event) {
+    private void Earning(MouseEvent event) throws IOException {
+          
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Earnings.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

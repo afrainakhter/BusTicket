@@ -8,107 +8,108 @@
 
 <AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.UserDashBoardController">
    <children>
-      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #f4f6f8;">
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="805.0" prefWidth="318.0" style="-fx-background-color: #C2DDF2;">
          <children>
-            <Text fill="#fc8414" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+            <Text fill="#ff8000" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="90.0" layoutY="499.0" onMouseClicked="#Routes" strokeType="OUTSIDE" strokeWidth="0.0" text="Routes" wrappingWidth="131.30908203125">
+            <Text fill="#ff8000" layoutX="90.0" layoutY="499.0" onMouseClicked="#Routes" strokeType="OUTSIDE" strokeWidth="0.0" text="Routes" wrappingWidth="131.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="95.0" layoutY="440.0" onMouseClicked="#Buses" strokeType="OUTSIDE" strokeWidth="0.0" text="Buses" wrappingWidth="195.3090564608574">
+            <Text fill="#ff8000" layoutX="95.0" layoutY="440.0" onMouseClicked="#Buses" strokeType="OUTSIDE" strokeWidth="0.0" text="Buses" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
+            <Text fill="#ff8000" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="90.0" layoutY="309.0" onMouseClicked="#TicketBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Booking" wrappingWidth="195.3090564608574">
+            <Text fill="#ff8000" layoutX="90.0" layoutY="309.0" onMouseClicked="#TicketBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Booking" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <FontAwesomeIcon fill="#f3933d" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="38.0" layoutY="308.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="41.0" layoutY="440.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
-            <Text fill="#fc8414" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
+            <FontAwesomeIcon fill="#ff8000" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="TICKET" layoutX="38.0" layoutY="308.0" size="2em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="BUS" layoutX="41.0" layoutY="440.0" size="2em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
+            <Text fill="#ff8000" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
             <FontAwesomeIcon fill="WHITE" glyphName="CIRCLE" layoutX="75.0" layoutY="202.0" size="10em" text="" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" text="" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
          </children></AnchorPane>
-      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #f3933d;">
+      <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #C2DDF2;">
          <children>
-            <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
+            <FontAwesomeIcon fx:id="Back" fill="#ff8000" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
+            <FontAwesomeIcon fill="#fc8209" glyphName="EDIT" layoutX="1179.0" layoutY="41.0" onMouseClicked="#edit" size="3em" />
          </children></AnchorPane>
       <AnchorPane layoutX="459.0" layoutY="216.0" onMouseClicked="#TicketBooking" prefHeight="177.0" prefWidth="312.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Label alignment="CENTER" layoutY="109.0" prefHeight="67.0" prefWidth="319.0" style="-fx-background-color: #fc8414;" text="Ticket Booking " textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="109.0" prefHeight="67.0" prefWidth="319.0" styleClass="Label" stylesheets="@home.css" text="Ticket Booking " textAlignment="CENTER" textFill="#097fd3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Label>
-            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="127.0" layoutY="82.0" size="4em" text="" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="TICKET" layoutX="127.0" layoutY="82.0" size="4em" text="" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="814.0" layoutY="212.0" onMouseClicked="#MyBooking" prefHeight="181.0" prefWidth="283.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Label alignment="CENTER" layoutY="123.0" onMouseClicked="#MyBooking" prefHeight="59.0" prefWidth="284.0" style="-fx-background-color: #fc8414;" text="My Bookings" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="123.0" onMouseClicked="#MyBooking" prefHeight="59.0" prefWidth="284.0" styleClass="Label" stylesheets="@home.css" text="My Bookings" textAlignment="CENTER" textFill="#097fd3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Label>
-            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="105.0" layoutY="75.0" size="4em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="HISTORY" layoutX="105.0" layoutY="75.0" size="4em" text="" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="329.0" layoutY="433.0" onMouseClicked="#Buses" prefHeight="170.0" prefWidth="238.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="298.0" style="-fx-background-color: #fc8414;" text="Buses We Have" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="298.0" styleClass="Label" stylesheets="@home.css" text="Buses We Have" textAlignment="CENTER" textFill="#097fd3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Label>
-            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="110.0" layoutY="76.0" size="4em" text="" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="BUS" layoutX="110.0" layoutY="76.0" size="4em" text="" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="634.0" layoutY="431.0" onMouseClicked="#Routes" prefHeight="170.0" prefWidth="290.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="290.0" style="-fx-background-color: #fc8414;" text="Available Routes" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="60.0" prefWidth="290.0" styleClass="Label" stylesheets="@home.css" text="Available Routes" textAlignment="CENTER" textFill="#097fd3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Label>
-            <FontAwesomeIcon fill="#f3933d" glyphName="ROAD" layoutX="98.0" layoutY="76.0" size="4em" text="" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="ROAD" layoutX="98.0" layoutY="76.0" size="4em" text="" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="936.0" layoutY="428.0" onMouseClicked="#Review" prefHeight="170.0" prefWidth="290.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Label alignment="CENTER" layoutY="110.0" prefHeight="61.0" prefWidth="290.0" style="-fx-background-color: #fc8414;" text="Review" textAlignment="CENTER" textFill="#f8f3f3">
+            <Label alignment="CENTER" layoutY="110.0" prefHeight="61.0" prefWidth="290.0" styleClass="Label" stylesheets="@home.css" text="Review" textAlignment="CENTER" textFill="#097fd3">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Label>
-            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="95.0" layoutY="81.0" size="4em" />
+            <FontAwesomeIcon fill="#ff8000" glyphName="COMMENTS" layoutX="95.0" layoutY="81.0" size="4em" />
          </children>
       </AnchorPane>
-      <Text fill="#fc8414" layoutX="327.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="263.4397888183594">
+      <Text fill="#ff8000" layoutX="327.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="263.4397888183594">
          <font>
             <Font name="SansSerif Regular" size="48.0" />
          </font>
       </Text>
-      <Label fx:id="WelCome" layoutX="590.0" layoutY="84.0" prefHeight="35.0" prefWidth="209.0" textFill="#21036b">
+      <Label fx:id="WelCome" layoutX="590.0" layoutY="84.0" prefHeight="35.0" prefWidth="226.0" textFill="#c2ddf2">
          <font>
             <Font size="48.0" />
          </font>

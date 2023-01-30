@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1252.0" style="-fx-background-color: #D8DFE7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.Admin_bookingsController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="805.0" prefWidth="258.0" style="-fx-background-color: #09192A;">
+         <children>
+            <Text fill="WHITE" layoutX="17.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUS BOOKING " textAlignment="CENTER" wrappingWidth="272.0519104003906">
+               <font>
+                  <Font name="SansSerif Regular" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="92.0" layoutY="266.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="90.0" layoutY="499.0" onMouseClicked="#Route" strokeType="OUTSIDE" strokeWidth="0.0" text="Routes" wrappingWidth="131.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="82.0" layoutY="430.0" onMouseClicked="#AddBus" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Bus" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="95.0" layoutY="375.0" onMouseClicked="#Bookings" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="93.0" layoutY="321.0" onMouseClicked="#Earnings" strokeType="OUTSIDE" strokeWidth="0.0" text="Earnings" wrappingWidth="195.3090564608574">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#fffbfb" glyphName="DASHBOARD" layoutX="41.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="38.0" layoutY="319.0" size="2em" />
+            <FontAwesomeIcon fill="#f8f4f4" glyphName="USERS" layoutX="39.0" layoutY="371.0" size="2em" />
+            <FontAwesomeIcon fill="#f8f7f7" glyphName="BUS" layoutX="40.0" layoutY="428.0" size="2em" />
+            <FontAwesomeIcon fill="#fcf3f3" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
+            <Text fill="WHITE" layoutX="88.0" layoutY="553.0" onMouseClicked="#Reports" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" wrappingWidth="131.30908203125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#fcf3f3" glyphName="COMMENTS" layoutX="41.0" layoutY="550.0" size="1.5em" />
+            <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="35.0" layoutY="36.0" onMouseClicked="#BACK" size="2em" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="276.0" layoutY="-3.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;" />
+      <TableView fx:id="Customer_table" layoutX="293.0" layoutY="73.0" prefHeight="732.0" prefWidth="962.0" style="-fx-border-color: orange; -fx-border-width: 7; -fx-background-color: ash;">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="97.0" text="Customer  ID" />
+          <TableColumn fx:id="Name" prefWidth="104.7691650390625" text="Name" />
+            <TableColumn fx:id="UserName" prefWidth="121.6851806640625" text="User Name" />
+            <TableColumn fx:id="Phone_no" prefWidth="142.25860595703125" text="Phone Number" />
+            <TableColumn fx:id="Email" prefWidth="136.40545654296875" text="E-mail" />
+            <TableColumn fx:id="busname" minWidth="0.0" prefWidth="131.3565673828125" text="Bus Name" />
+            <TableColumn fx:id="FromBus" minWidth="0.0" prefWidth="131.3565673828125" text="From" />
+            <TableColumn fx:id="ToBus" minWidth="0.0" prefWidth="82.4893798828125" text="To" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

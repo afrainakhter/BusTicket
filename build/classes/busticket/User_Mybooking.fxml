@@ -12,46 +12,46 @@
    <children>
       <AnchorPane layoutX="-6.0" layoutY="-2.0" prefHeight="803.0" prefWidth="248.0" style="-fx-background-color: #f4f6f8;">
          <children>
-            <Text fill="#fc8414" layoutX="97.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+            <Text fill="#fc8414" layoutX="84.0" layoutY="265.0" onMouseClicked="#DashBoard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
             <Text fill="#fc8414" layoutX="90.0" layoutY="499.0" onMouseClicked="#Routes" strokeType="OUTSIDE" strokeWidth="0.0" text="Routes" wrappingWidth="131.30908203125">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
             <Text fill="#fc8414" layoutX="95.0" layoutY="440.0" onMouseClicked="#Buses" strokeType="OUTSIDE" strokeWidth="0.0" text="Buses" wrappingWidth="195.3090564608574">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
-            <Text fill="#fc8414" layoutX="96.0" layoutY="377.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
+            <Text fill="#fc8414" layoutX="84.0" layoutY="378.0" onMouseClicked="#MyBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="195.3090564608574">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
             <Text fill="#fc8414" layoutX="84.0" layoutY="322.0" onMouseClicked="#TicketBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Booking" wrappingWidth="195.3090564608574">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
-            <FontAwesomeIcon fill="#f3933d" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="TICKET" layoutX="37.0" layoutY="320.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="BUS" layoutX="41.0" layoutY="440.0" size="2em" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="DASHBOARD" layoutX="38.0" layoutY="265.0" size="2em" text="" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="TICKET" layoutX="37.0" layoutY="320.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="HISTORY" layoutX="42.0" layoutY="378.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="BUS" layoutX="41.0" layoutY="440.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="ROAD" layoutX="41.0" layoutY="495.0" size="2em" text="" />
             <Text fill="#fc8414" layoutX="88.0" layoutY="553.0" onMouseClicked="#Review" strokeType="OUTSIDE" strokeWidth="0.0" text="Review" wrappingWidth="131.30908203125">
                <font>
-                  <Font size="30.0" />
+                  <Font size="26.0" />
                </font>
             </Text>
             <FontAwesomeIcon fill="WHITE" glyphName="CIRCLE" layoutX="75.0" layoutY="202.0" size="10em" text="" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
-            <FontAwesomeIcon fill="#f3933d" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="USER" layoutX="90.0" layoutY="196.0" size="8em" wrappingWidth="58.84684330798501" />
+            <FontAwesomeIcon fill="#ea5e12" glyphName="COMMENTS" layoutX="42.0" layoutY="552.0" size="2em" />
          </children></AnchorPane>
-      <AnchorPane layoutX="-30.0" layoutY="-10.0" prefHeight="53.0" prefWidth="1299.0" style="-fx-background-color: #f3933d;">
+      <AnchorPane layoutX="-30.0" layoutY="-10.0" prefHeight="53.0" prefWidth="1299.0" style="-fx-background-color: #ea5e12;">
          <children>
             <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="50.0" layoutY="36.0" onMouseClicked="#Back" size="2em" />
             <Label fx:id="User_Name" layoutX="1097.0" layoutY="9.0" prefHeight="26.0" prefWidth="167.0" textFill="WHITE">
@@ -60,7 +60,7 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <TableView fx:id="userbook_table" layoutX="228.0" layoutY="45.0" prefHeight="745.0" prefWidth="1040.0">
+      <TableView fx:id="userbook_table" layoutX="267.0" layoutY="40.0" prefHeight="750.0" prefWidth="1001.0" style="-fx-border-color: #ea5e12;">
         <columns>
           <TableColumn fx:id="busname" prefWidth="132.50701904296875" text="Bus Name" />
           <TableColumn fx:id="seats" prefWidth="105.49301147460938" text="Seats" />

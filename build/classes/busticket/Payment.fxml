@@ -50,21 +50,91 @@
             <ComboBox fx:id="Payment" layoutX="889.0" layoutY="437.0" prefHeight="47.0" prefWidth="288.0" style="-fx-background-color: #FDAB45;" />
             <AnchorPane layoutX="-11.0" layoutY="9.0" prefHeight="798.0" prefWidth="667.0">
                <children>
-                  <ImageView fitHeight="530.0" fitWidth="636.0" layoutX="13.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="426.0" fitWidth="590.0" layoutX="74.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@pay.jpg" />
                      </image>
                   </ImageView>
+                  <Label fx:id="TO" layoutX="162.0" layoutY="97.0" prefHeight="27.0" prefWidth="139.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date" layoutX="155.0" layoutY="174.0" prefHeight="36.0" prefWidth="150.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="From" layoutX="161.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="no_of_Seat" layoutX="151.0" layoutY="212.0" prefHeight="36.0" prefWidth="175.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" layoutX="161.0" layoutY="256.0" prefHeight="31.0" prefWidth="161.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="61.0" prefHeight="31.0" prefWidth="128.0" text="From             :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="95.0" prefHeight="31.0" prefWidth="139.0" text="To                  :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="174.0" prefHeight="31.0" prefWidth="128.0" text="Date               :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="214.0" prefHeight="30.0" prefWidth="103.0" text="Seat                :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="259.0" prefHeight="31.0" prefWidth="128.0" text="Time              :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Busname" layoutX="151.0" layoutY="141.0" prefHeight="26.0" prefWidth="161.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="139.0" prefHeight="31.0" prefWidth="128.0" text="  Bus Name   :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tic" layoutX="29.0" layoutY="523.0" prefHeight="31.0" prefWidth="161.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="-2.0" layoutY="-12.0" prefHeight="67.0" prefWidth="1205.0" style="-fx-background-color: #FDAB45;">
                <children>
-                  <Label fx:id="Amount" layoutX="474.0" layoutY="4.0" prefHeight="68.0" prefWidth="419.0" text="SELECT YOUR PAYMENT METHOD" textFill="WHITE">
+                  <Label fx:id="Amount" layoutX="474.0" layoutY="4.0" prefHeight="68.0" prefWidth="419.0" text="PAYMENT" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Regular" size="24.0" />
                      </font>
                   </Label>
                   <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="26.0" layoutY="47.0" onMouseClicked="#Back" size="2em" />
+                  <Label fx:id="user_name" layoutX="1024.0" layoutY="30.0" prefHeight="30.0" prefWidth="115.0" textFill="#f2f2f2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <Label layoutX="653.0" layoutY="125.0" prefHeight="46.0" prefWidth="182.0" text="Your Total Price:" textFill="#2b298d">

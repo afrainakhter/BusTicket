@@ -38,8 +38,12 @@ public class User_avilable_busOperatorController implements Initializable {
 
     @FXML
     private void BACK(MouseEvent event) throws IOException {
+        
+        
          FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         Parent root = fxmlLoader.load();
+        
+        
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("DashBoard");

@@ -51,10 +51,9 @@ public class TicketBookingController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         ObservableList<String> list1 = FXCollections.observableArrayList("Rajshahi", "Chattogram", "Khulna", "Sylhet", "Barishal", "Cumilla", "Narayanganj", "Gazipur", "Bhairab", "Bogura", "Brahmanbaria", "Chandpur", "Chowmuhani", "Chuadanga", "Cumilla Sadar Dakshin", "Cox's Bazar", "Dinajpur", "Faridpur", "Feni", "Jamalpur", "Jashore", "Jhenaidah", "Kadam Rasul (Bandar)",
-            
-               "Kaliakair", "Kishoreganj", "Kushtia", "Maijdee", "Naogaon", "Narsingdi", "Nawabganj", "Pabna", "Saidpur", "Satkhira", "Savar", "Siddhirganj", "Sirajganj", "Sreepur", "Tangail", "Tarabo", "Tongi");
-         ObservableList<String> list2 = FXCollections.observableArrayList("Dhaka");
-        
+                "Kaliakair", "Kishoreganj", "Kushtia", "Maijdee", "Naogaon", "Narsingdi", "Nawabganj", "Pabna", "Saidpur", "Satkhira", "Savar", "Siddhirganj", "Sirajganj", "Sreepur", "Tangail", "Tarabo", "Tongi");
+        ObservableList<String> list2 = FXCollections.observableArrayList("Dhaka");
+
         From.setItems(list2);
         To.setItems(list1);
 
@@ -63,18 +62,7 @@ public class TicketBookingController implements Initializable {
     @FXML
     private void CheckAvility(ActionEvent event) throws IOException {
 
-////
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("Seat.fxml"));
-//        Parent root = loader.load();
-//
-//        Scene scene = new Scene(root);
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        stage.setScene(scene);
-//        stage.setTitle("Select Seat ");
-//        stage.show();
-//       SeatController seat = loader.getController();
-//       
-//       
+        String u = WelComeUser.getText();
         String s1 = From.getSelectionModel().getSelectedItem().toString();
         String s2 = To.getSelectionModel().getSelectedItem().toString();
         LocalDate date = Date_picker.getValue();
@@ -82,7 +70,7 @@ public class TicketBookingController implements Initializable {
         Parent root = loader.load();
 
         Available_BusController available_BusController = loader.getController();
-
+        available_BusController.username(u);
         available_BusController.show_PlaceName_from(s1);
         available_BusController.show_PlaceName_to(s2);
         available_BusController.show_date(date.toString());
@@ -97,9 +85,8 @@ public class TicketBookingController implements Initializable {
 
     @FXML
     private void RoundTrip(ActionEvent event) throws IOException {
-        
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("RoundTrip.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("RoundTrip.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -122,20 +109,29 @@ public class TicketBookingController implements Initializable {
         stage.show();
     }
 
-   
     @FXML
     private void BACK(MouseEvent event) throws IOException {
+        String u= WelComeUser.getText();
         System.out.println("clicked");
+
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
+       
         Parent root = fxmlLoader.load();
+         UserDashBoardController user=fxmlLoader.getController();
+        user.displayName(u);
+        
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Sign up Page");
         stage.setScene(scene);
         stage.show();
-        
-        
+
+    }
+
+    public void username(String name) {
+        WelComeUser.setText(name);
+
     }
 
 }

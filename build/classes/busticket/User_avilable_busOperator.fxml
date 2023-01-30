@@ -3,26 +3,18 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="busticket.User_avilable_busOperatorController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.User_avilable_busOperatorController">
    <children>
       <StackPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1202.0">
          <children>
             <AnchorPane prefHeight="787.0" prefWidth="1127.0">
                <children>
-                  <ImageView fitHeight="805.0" fitWidth="1270.0" layoutX="-1.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@main.png" />
-                     </image>
-                  </ImageView>
                   <ButtonBar layoutX="460.0" layoutY="662.0" prefHeight="40.0" prefWidth="200.0" />
                   <Label fx:id="From_feild" layoutX="121.0" layoutY="119.0" prefHeight="40.0" prefWidth="354.0" text="AVAILABLE BUS OPERATORS" textFill="#f26914">
                      <font>
@@ -30,7 +22,6 @@
                      </font>
                   </Label>
                   <FontAwesomeIcon fill="#f26914" glyphName="BUS" layoutX="72.0" layoutY="152.0" size="3em" wrappingWidth="37.071428298950195" />
-                  <FontAwesomeIcon fill="#f8f3f3" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="23.0" onMouseClicked="#BACK" size="2em" />
                   <Line endX="876.0" layoutX="215.0" layoutY="157.0" startX="-100.0" />
                   <AnchorPane layoutX="109.0" layoutY="215.0" prefHeight="433.0" prefWidth="456.0">
                      <children>
@@ -158,7 +149,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="624.0" layoutY="229.0" prefHeight="433.0" prefWidth="487.0">
                      <children>
-                        <Text layoutX="-9.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Royal Coach">
+                        <Text layoutX="-9.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hanif">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -198,7 +189,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="-4.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shahzadpur Travels">
+                        <Text layoutX="-4.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desh-Travels">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -253,7 +244,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Text layoutX="-8.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ranga Provat Paribahan Ltd">
+                        <Text layoutX="-11.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="National" wrappingWidth="84.26955604553223">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -270,6 +261,10 @@
                         </Text>
                      </children>
                   </AnchorPane>
+                  <AnchorPane layoutX="-6.0" layoutY="-9.0" prefHeight="62.0" prefWidth="1215.0" style="-fx-background-color: #ea5e12;">
+                     <children>
+                        <FontAwesomeIcon fill="#f8f3f3" glyphName="ARROW_LEFT" layoutX="22.0" layoutY="38.0" onMouseClicked="#BACK" size="2em" />
+                     </children></AnchorPane>
                </children>
             </AnchorPane>
          </children>

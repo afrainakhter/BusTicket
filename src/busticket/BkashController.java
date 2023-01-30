@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -28,9 +30,13 @@ import javafx.stage.Stage;
 public class BkashController implements Initializable {
 
     @FXML
-    private AnchorPane Dhaka_to_Dinajpur;
-    @FXML
     private FontAwesomeIcon Back;
+    @FXML
+    private TextField bkash_no;
+    @FXML
+    private PasswordField pin_no;
+    @FXML
+    private TextField total_amount;
 
     /**
      * Initializes the controller class.
@@ -52,12 +58,22 @@ public class BkashController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void bkash(MouseEvent event) {
-    }
 
     @FXML
     private void submit(ActionEvent event) throws IOException {
+       String bkash= bkash_no.getText();
+       String pass=pin_no.getText();
+       
+       if(bkash.equals("")&&pass.equals("")){
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Payment_unsuccessful.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Payment Page");
+        stage.setScene(scene);
+        stage.show();
+       }else{
         
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("payment_successfull.fxml"));
         Parent root = fxmlLoader.load();
@@ -68,10 +84,26 @@ public class BkashController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
-    }
+    }}
 
     @FXML
-    private void Card(MouseEvent event) {
+    private void Card(MouseEvent event) throws IOException {
+        
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Card.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Card Page");
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+    
+    public void totalPrice(String totalprice){
+    
+       total_amount.setText(totalprice);
+    
     }
     
 }

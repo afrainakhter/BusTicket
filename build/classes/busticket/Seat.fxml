@@ -3,8 +3,6 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
@@ -13,11 +11,6 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="809.0" fitWidth="1235.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@main.png" />
-               </image>
-            </ImageView>
             <AnchorPane layoutX="3.0" layoutY="403.0" prefHeight="403.0" prefWidth="1198.0" style="-fx-background-color: CACDD4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="403.0">
                <children>
                   <Label layoutX="358.0" layoutY="329.0" prefHeight="38.0" prefWidth="49.0" style="-fx-background-color: ORANGE;" />
@@ -200,7 +193,12 @@
                   <FontAwesomeIcon fill="#f5eded" glyphName="TRASH" layoutX="905.0" layoutY="266.0" size="2em" />
                </children>
             </AnchorPane>
-            <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="23.0" layoutY="26.0" onMouseClicked="#Back" />
+            <AnchorPane layoutX="3.0" layoutY="-7.0" prefHeight="54.0" prefWidth="1209.0" style="-fx-background-color: #ff7b08;">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="18.0" layoutY="40.0" onMouseClicked="#Back" size="2em" />
+                  <Label fx:id="Username" layoutX="1048.0" layoutY="12.0" prefHeight="30.0" prefWidth="124.0" textFill="#f2ecec" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

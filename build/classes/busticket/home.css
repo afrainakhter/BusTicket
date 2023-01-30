@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2023, 7:46:39 PM
+    Author     : macbookpro
+*/
+
+#log_In{
+  
+   
+    -fx-background-color: #C2DDF2;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 2px; 
+ -fx-border-color: #C2DDF2;
+ 
+}
+#register{
+   
+    -fx-background-color: #C2DDF2;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 2px; 
+ -fx-border-color: #C2DDF2;
+ 
+}
+#about_us{
+    
+    
+    -fx-background-color: #C2DDF2;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 2px; 
+ -fx-border-color: #C2DDF2;
+  
+}
+#contact_us{
+ 
+    
+    -fx-background-color: #C2DDF2;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 2px; 
+ -fx-border-color: #C2DDF2;
+ 
+
+}
+#log_In:hover{
+    
+    -fx-text-fill: orangered;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-border-width: 2px;
+    -fx-border-color: #6699ff;
+      -fx-cursor: hand;
+}
+#contact_us:hover{
+        -fx-text-fill: orangered;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-border-width: 2px;
+    -fx-border-color: #6699ff;
+    
+       -fx-transition: 0.3s;
+      -fx-cursor: hand;
+      
+    
+}
+#register:hover{
+        -fx-text-fill: orangered;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-border-width: 2px;
+    -fx-border-color: #6699ff;
+     -fx-cursor: hand;
+  
+    
+}#about_us:hover{
+        -fx-text-fill: orangered;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-border-width: 2px;
+    -fx-border-color: #6699ff;
+   
+     -fx-cursor: hand;
+    
+}
+
+#login{
+    
+     -fx-background-color: #fc8414;
+      -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+     -fx-text-fill: white;
+    
+    
+}
+#login:hover{
+    
+     -fx-background-color: white;
+      -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+     -fx-text-fill: #fc8414;
+     -fx-border-width: 2px;
+    -fx-border-color: #fc8414;
+ 
+     -fx-cursor: hand;
+    
+}
+.Label{
+    
+    
+    -fx-background-color: #C2DDF2;
+    -fx-text-fill: #ffffff;
+    
+}
+.Label:hover{
+    
+    
+    -fx-background-color: #fc8414;
+    -fx-text-fill: #ffffff;
+     -fx-cursor: hand;
+}

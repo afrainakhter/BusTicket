@@ -97,8 +97,14 @@ public class UserDashBoardController implements Initializable {
 
     @FXML
     private void TicketBooking(MouseEvent event) throws IOException {
+        
+        
+        String u=WelCome.getText();
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("TicketBooking.fxml"));
         Parent root = fxmlLoader.load();
+        
+        TicketBookingController tic=fxmlLoader.getController();
+        tic.username(u);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Book Your ticket");
@@ -126,6 +132,7 @@ public class UserDashBoardController implements Initializable {
 
     @FXML
     private void BACK(MouseEvent event) throws IOException {
+        
         
          FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
                 Parent root = loader.load();
@@ -167,6 +174,20 @@ public class UserDashBoardController implements Initializable {
      public void displayName(String Name) {
 
        WelCome.setText( Name );
+    }
+
+    @FXML
+    private void edit(MouseEvent event) throws IOException {
+         String u=WelCome.getText();
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("Edit_Profile.fxml"));
+                Parent root = loader.load();
+               Edit_ProfileController edit=loader.getController();
+               edit.displayName(u);
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.setTitle("Login");
+                stage.show();
     }
 
 

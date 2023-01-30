@@ -57,6 +57,10 @@ Connection connection = null;
     Bus_list bus = null;
 
     ObservableList<Admin_customer_data> data;
+    @FXML
+    private TableColumn<Admin_customer_data, String> city;
+    @FXML
+    private TableColumn<Admin_customer_data, String> div;
 
     /**
      * Initializes the controller class.
@@ -90,7 +94,11 @@ Connection connection = null;
         Email.setCellValueFactory(new PropertyValueFactory<>("email"));
        
         
-    
+     city.setCellValueFactory(new PropertyValueFactory<>("From_bus"));
+
+        div.setCellValueFactory(new PropertyValueFactory<>("to_bus"));
+       
+        
     
     
     
@@ -109,18 +117,22 @@ Connection connection = null;
 
         try {
 
-            preparedStatement = connection.prepareStatement("Select * From Booking_history");
+            preparedStatement = connection.prepareStatement("Select * From login");
 
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
 
                data.add(new Admin_customer_data(
-                       resultSet.getInt("Customer_ID"),
-                        resultSet.getString("First_Name"),
-                        resultSet.getString("Mobile_No"),
-                        resultSet.getString("E-mail"),
-                        resultSet.getString("User_name")
+                       resultSet.getInt("ID"),
+                        resultSet.getString("FirstName"),
+                        resultSet.getString("mobile"),
+                        resultSet.getString("email"),
+                        resultSet.getString("user_name"),
+                        resultSet.getString("city"),
+                        resultSet.getString("division"),
+                        resultSet.getString("city")
+                        
                         
                                         ));
 
@@ -178,7 +190,14 @@ Connection connection = null;
     }
 
     @FXML
-    private void Route(MouseEvent event) {
+    private void Route(MouseEvent event) throws IOException {
+             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("AdminRoutes.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
         
         
         
@@ -186,23 +205,50 @@ Connection connection = null;
     }
 
     @FXML
-    private void AddBus(MouseEvent event) {
+    private void AddBus(MouseEvent event) throws IOException {
+             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_AddBus.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
         
     }
 
     @FXML
-    private void Bookings(MouseEvent event) {
+    private void Bookings(MouseEvent event) throws IOException {
+             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_bookings.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
         
     }
 
     @FXML
-    private void Earnings(MouseEvent event) {
+    private void Earnings(MouseEvent event) throws IOException {
+             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Earnings.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
         
     }
 
     @FXML
-    private void Reports(MouseEvent event) {
-        
+    private void Reports(MouseEvent event) throws IOException {
+             FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin_Report.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Earning");
+        stage.setScene(scene);
+        stage.show();
         
     }
     

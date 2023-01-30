@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../Style/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.LoginController">
    <children>
       <AnchorPane prefHeight="444.0" prefWidth="600.0" style="-fx-background-color: white;">
          <children>
@@ -37,13 +37,13 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="600.0" prefHeight="802.0" prefWidth="600.0" style="-fx-background-color: #d3caca;">
+      <AnchorPane layoutX="600.0" prefHeight="802.0" prefWidth="600.0" style="-fx-background-color: #C2DDF2;">
          <children>
             <FontAwesomeIcon fill="#fc8414" glyphName="USER" layoutX="276.0" layoutY="171.0" size="4.5em" wrappingWidth="47.25" />
-            <TextField fx:id="UserNAme" layoutX="222.0" layoutY="267.0" prefHeight="40.0" prefWidth="244.0" promptText="Enter Your Name" />
-            <FontAwesomeIcon fill="#1e1e1d" glyphName="USER" layoutX="192.0" layoutY="296.0" size="2em" />
-            <FontAwesomeIcon fill="#141413" glyphName="LOCK" layoutX="192.0" layoutY="366.0" size="2em" />
-            <Button layoutX="255.0" layoutY="466.0" mnemonicParsing="false" onAction="#LOGIN" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #fc8414;" text="Login" textFill="WHITE">
+            <TextField fx:id="UserNAme" layoutX="222.0" layoutY="267.0" prefHeight="40.0" prefWidth="244.0" promptText="Enter Your Name" style="-fx-background-radius: 50px;" />
+            <FontAwesomeIcon fill="#1636b5" glyphName="USER" layoutX="192.0" layoutY="296.0" size="2em" />
+            <FontAwesomeIcon fill="#1a15b5" glyphName="LOCK" layoutX="192.0" layoutY="366.0" size="2em" />
+            <Button fx:id="login" layoutX="255.0" layoutY="466.0" mnemonicParsing="false" onAction="#LOGIN" prefHeight="40.0" prefWidth="144.0" stylesheets="@home.css" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -53,13 +53,13 @@
                   <Font size="18.0" />
                </font>
             </Hyperlink>
-            <PasswordField fx:id="Pass" layoutX="222.0" layoutY="336.0" prefHeight="40.0" prefWidth="244.0" promptText="Password" />
+            <PasswordField fx:id="Pass" layoutX="222.0" layoutY="336.0" prefHeight="40.0" prefWidth="244.0" promptText="Password" style="-fx-background-radius: 50px;" />
             <Hyperlink layoutX="61.0" layoutY="590.0" onAction="#Creat_acc" prefHeight="39.0" prefWidth="263.0" text="Don't have an account?" textFill="#141414" underline="true">
                <font>
                   <Font size="18.0" />
                </font>
             </Hyperlink>
-            <FontAwesomeIcon fill="#171717" glyphName="USER" layoutX="255.0" layoutY="187.0" size="4.5em" wrappingWidth="47.25" />
+            <FontAwesomeIcon fill="#3413ae" glyphName="USER" layoutX="255.0" layoutY="187.0" size="4.5em" wrappingWidth="47.25" />
             <Text fill="#241ea8" layoutX="255.0" layoutY="538.0" onMouseClicked="#Admin_login" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN LOGIN" textAlignment="CENTER" underline="true" wrappingWidth="118.99999380111694" />
          </children></AnchorPane>
    </children>
