@@ -70,12 +70,16 @@
             <Image url="@visa.png" />
          </image>
       </ImageView>
-      <Label fx:id="to" layoutX="430.0" layoutY="731.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
-      <Label fx:id="From" layoutX="499.0" layoutY="666.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
-      <Label fx:id="date" layoutX="342.0" layoutY="666.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
+      <Label fx:id="to" layoutX="430.0" layoutY="731.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f3f3" />
+      <Label fx:id="From" layoutX="499.0" layoutY="666.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
+      <Label fx:id="date" layoutX="342.0" layoutY="666.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
       <Label fx:id="Tickiet_price" layoutX="342.0" layoutY="731.0" prefHeight="31.0" prefWidth="121.0" textFill="WHITE" />
-      <Label fx:id="busname" layoutX="523.0" layoutY="731.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f5f5" />
-      <Label fx:id="time" layoutX="463.0" layoutY="674.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
-      <Label fx:id="seat" layoutX="478.0" layoutY="635.0" prefHeight="31.0" prefWidth="121.0" text="Label" textFill="#f8f3f3" />
+      <Label fx:id="busname" layoutX="523.0" layoutY="731.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
+      <Label fx:id="time" layoutX="463.0" layoutY="674.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f3f3" />
+      <Label fx:id="seat" layoutX="478.0" layoutY="635.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f3f3" />
+      <Label fx:id="mail" layoutX="440.0" layoutY="741.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f3f3" />
+      <Label fx:id="phone" layoutX="509.0" layoutY="676.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
+      <Label fx:id="firstname" layoutX="352.0" layoutY="676.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
+      <Label fx:id="lastname" layoutX="533.0" layoutY="741.0" prefHeight="31.0" prefWidth="121.0" textFill="#f8f5f5" />
    </children>
 </AnchorPane>

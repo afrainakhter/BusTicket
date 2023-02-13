@@ -19,7 +19,7 @@
                   <Font name="SansSerif Regular" size="36.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="97.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
+            <Text fill="WHITE" layoutX="97.0" layoutY="265.0" onMouseClicked="#dashboard" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="195.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
@@ -39,7 +39,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
+            <Text fill="WHITE" layoutX="90.0" layoutY="309.0" onMouseClicked="#user" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
                </font>
@@ -49,12 +49,12 @@
             <FontAwesomeIcon fill="#f8f4f4" glyphName="TICKET" layoutX="38.0" layoutY="357.0" size="2em" />
             <FontAwesomeIcon fill="#fcf3f3" glyphName="ROAD" layoutX="38.0" layoutY="452.0" size="2em" text="" />
             <FontAwesomeIcon fill="#f5f0f0" glyphName="MONEY" layoutX="38.0" layoutY="412.0" size="2em" wrappingWidth="12.415039792376774" />
-            <Text fill="WHITE" layoutX="85.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" wrappingWidth="131.30908203125">
+            <Text fill="WHITE" layoutX="85.0" layoutY="510.0" onMouseClicked="#reviews" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews" wrappingWidth="131.30908203125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <FontAwesomeIcon fill="#fcf3f3" glyphName="CREDIT_CARD" layoutX="38.0" layoutY="507.0" size="1.5em" text="" />
+            <FontAwesomeIcon fill="#fcf3f3" glyphName="COMMENTS" layoutX="38.0" layoutY="507.0" size="1.5em" />
             <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="35.0" layoutY="36.0" onMouseClicked="#BACK" size="2em" />
          </children></AnchorPane>
       <AnchorPane layoutX="276.0" layoutY="-3.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;" />

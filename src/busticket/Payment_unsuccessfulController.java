@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -27,7 +28,7 @@ import javafx.stage.Stage;
 public class Payment_unsuccessfulController implements Initializable {
 
     @FXML
-    private FontAwesomeIcon Back;
+    private Label username;
 
     /**
      * Initializes the controller class.
@@ -35,42 +36,31 @@ public class Payment_unsuccessfulController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
-    @FXML
-    private void BACK(MouseEvent event) throws IOException {
-        
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Payment.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
-        stage.setScene(scene);
-        stage.show();
-        
-        
     }
 
     @FXML
     private void Exit(ActionEvent event) throws IOException {
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Home Page");
         stage.setScene(scene);
         stage.show();
-        
-        
+
     }
 
     @FXML
     private void home(ActionEvent event) throws IOException {
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         Parent root = fxmlLoader.load();
+
+        String u = username.getText();
+        UserDashBoardController user = fxmlLoader.getController();
+        user.displayName(u);
+
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Home Page");
@@ -80,16 +70,24 @@ public class Payment_unsuccessfulController implements Initializable {
 
     @FXML
     private void Try_again(ActionEvent event) throws IOException {
-        
-         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Payment.fxml"));
+
+        String u = username.getText();
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Payment.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
+
+        PaymentController pay = fxmlLoader.getController();
+        pay.user_name(u);
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Home Page");
         stage.setScene(scene);
         stage.show();
-        
-        
+
     }
-    
+
+    public void username(String u) {
+        username.setText(u);
+    }
+
 }

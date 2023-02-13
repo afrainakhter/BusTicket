@@ -30,6 +30,11 @@
       <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #ff0e92;">
          <children>
             <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
+            <Label fx:id="username" layoutX="1109.0" layoutY="15.0" prefHeight="17.0" prefWidth="131.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
       <Text fill="#ff0e92" layoutX="378.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAY ONLINE WITH" wrappingWidth="476.4397888183594">
          <font>

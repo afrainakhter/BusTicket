@@ -13,16 +13,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E3F1F4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.RegisterController">
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1303.0" style="-fx-background-color: #E3F1F4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticket.RegisterController">
    <children>
-      <ImageView fitHeight="517.0" fitWidth="527.0" layoutX="73.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="462.0" fitWidth="596.0" layoutX="63.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/signup%20(2).jpeg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="73.0" layoutY="77.0" prefHeight="247.0" prefWidth="527.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutX="63.0" layoutY="61.0" prefHeight="259.0" prefWidth="599.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Label layoutX="165.0" layoutY="14.0" prefHeight="70.0" prefWidth="197.0" text="WELCOME TO" textFill="#fc7100">
+            <Label layoutX="165.0" layoutY="14.0" prefHeight="70.0" prefWidth="197.0" text="WELCOME TO" textFill="#f76f00">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -38,7 +38,7 @@
                </font>
             </Text>
          </children></AnchorPane>
-      <AnchorPane layoutX="600.0" layoutY="77.0" prefHeight="644.0" prefWidth="520.0" style="-fx-background-color: #B3B6B7;">
+      <AnchorPane layoutX="657.0" layoutY="62.0" prefHeight="700.0" prefWidth="613.0" style="-fx-background-color: #B3B6B7;">
          <children>
             <Label layoutX="194.0" layoutY="57.0" text="Sign Up" textFill="#fc7100">
                <font>
@@ -48,8 +48,7 @@
             <TextField fx:id="FirstName" layoutX="37.0" layoutY="144.0" prefHeight="44.0" prefWidth="216.0" promptText="First Name" />
             <TextField fx:id="LastName" layoutX="277.0" layoutY="144.0" prefHeight="44.0" prefWidth="216.0" promptText="Last Name" />
             <TextField fx:id="UserName" layoutX="37.0" layoutY="205.0" prefHeight="44.0" prefWidth="456.0" promptText="User Name" />
-            <PasswordField fx:id="PassWord" layoutX="37.0" layoutY="265.0" prefHeight="44.0" prefWidth="456.0" promptText="Enter Password" />
-            <PasswordField fx:id="ConfirmPass" layoutX="37.0" layoutY="322.0" prefHeight="44.0" prefWidth="456.0" promptText="Confirm Password" />
+            <PasswordField fx:id="PassWord" layoutX="37.0" layoutY="322.0" prefHeight="44.0" prefWidth="456.0" promptText="Password" />
             <Button layoutX="198.0" layoutY="527.0" mnemonicParsing="false" onAction="#Register" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #fc7100;" text="REGISTER" textFill="WHITE" />
             <CheckBox layoutX="37.0" layoutY="491.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="456.0" text="You agree to our Terms and Privacy Policy" />
             <Text fill="#03384d" layoutX="37.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
@@ -62,9 +61,10 @@
                   <Font size="14.0" />
                </font>
             </Hyperlink>
-            <TextField fx:id="SeqQues" layoutX="38.0" layoutY="380.0" prefHeight="44.0" prefWidth="456.0" promptText="Enter Your Security Question" />
-            <TextField fx:id="Ans" layoutX="37.0" layoutY="435.0" prefHeight="44.0" prefWidth="456.0" promptText="Answer" />
+            <Label fx:id="hide" layoutX="338.0" layoutY="28.0" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #B3B6B7;" textFill="WHITE" />
+            <TextField fx:id="Email" layoutX="38.0" layoutY="267.0" prefHeight="44.0" prefWidth="456.0" promptText="Email" />
+            <PasswordField fx:id="Mobile" layoutX="37.0" layoutY="381.0" prefHeight="44.0" prefWidth="456.0" promptText="Password" />
          </children></AnchorPane>
-      <FontAwesomeIcon fill="ORANGE" glyphName="ARROW_LEFT" layoutX="50.0" layoutY="44.0" onMouseClicked="#Back" size="2em" />
+      <FontAwesomeIcon fill="ORANGE" glyphName="ARROW_LEFT" layoutX="40.0" layoutY="34.0" onMouseClicked="#Back" size="2em" text="" wrappingWidth="1.0" />
    </children>
 </AnchorPane>

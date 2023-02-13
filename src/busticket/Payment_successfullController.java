@@ -76,6 +76,7 @@ public class Payment_successfullController implements Initializable {
 
     @FXML
     private void BACK(MouseEvent event) {
+
     }
 
     @FXML
@@ -92,10 +93,15 @@ public class Payment_successfullController implements Initializable {
 
     @FXML
     private void home(ActionEvent event) throws IOException {
-
+        String u = username.getText();
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         Parent root = fxmlLoader.load();
+
+        UserDashBoardController user = fxmlLoader.getController();
+        user.displayName(u);
+
         Scene scene = new Scene(root);
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Home Page");
         stage.setScene(scene);
@@ -111,17 +117,15 @@ public class Payment_successfullController implements Initializable {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
 
         System.out.println("conected");
-        
-        
-        String u=username.getText();
-        String f=From.getText();
-        String t=to.getText();
-        String s=seat.getText();
-        
+
+        String u = username.getText();
+        String f = From.getText();
+        String t = to.getText();
+        String s = seat.getText();
+
         JasperDesign jdesign = JRXmlLoader.load("/Users/macbookpro/NetBeansProjects/BusTicket/src/busticket/PaySlip.jrxml");
-        String sql = "SELECT * from Booking_history WHERE `User_name`='"+u+"'AND `From_bus`='"+f+"' AND `To_bus`='"+t+"' AND `Seat`='"+s+"' ";
-        
-        
+        String sql = "SELECT * from Booking_history WHERE `User_name`='" + u + "'AND `From_bus`='" + f + "' AND `To_bus`='" + t + "' AND `Seat`='" + s + "' ";
+
         JRDesignQuery updateQuery = new JRDesignQuery();
 
         updateQuery.setText(sql);
@@ -134,11 +138,13 @@ public class Payment_successfullController implements Initializable {
         JasperViewer.viewReport(jPrint, false);
 
     }
-    public void username(String user_name){
-    
-       username.setText(user_name);
-    
+
+    public void username(String user_name) {
+
+        username.setText(user_name);
+
     }
+
     public void busfrom(String frombus) {
 
         From.setText(frombus);
@@ -168,11 +174,11 @@ public class Payment_successfullController implements Initializable {
         time.setText(Time);
 
     }
+
     public void busTO(String tobus) {
 
         to.setText(tobus);
 
     }
-
 
 }

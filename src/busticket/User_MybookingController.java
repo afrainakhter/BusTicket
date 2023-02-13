@@ -18,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -65,17 +66,20 @@ public class User_MybookingController implements Initializable {
     PreparedStatement preparedStatement = null;
 
     ResultSet resultSet = null;
-    
-    
-      
-    
+    @FXML
+    private TableColumn<MyBooking, Integer> C_ID;
+    @FXML
+    private TextField ID;
+
+    int index=-1;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         data = FXCollections.observableArrayList();
-        
+
         col();
        
     }
@@ -89,6 +93,7 @@ public class User_MybookingController implements Initializable {
         total_price.setCellValueFactory(new PropertyValueFactory<>("total_amount"));
         date.setCellValueFactory(new PropertyValueFactory<>("date"));
         time.setCellValueFactory(new PropertyValueFactory<>("time"));
+        C_ID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
     }
 
@@ -99,17 +104,13 @@ public class User_MybookingController implements Initializable {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
 
         System.out.println("conected");
-        String u=User_Name.getText();
-         
+        String u = User_Name.getText();
+
         try {
 
-           
-           
             preparedStatement = connection.prepareStatement("Select * from Booking_history Where User_name=?");
-          preparedStatement.setString(1, u);
+            preparedStatement.setString(1, u);
             resultSet = preparedStatement.executeQuery();
-            
-            
 
             while (resultSet.next()) {
 
@@ -121,7 +122,8 @@ public class User_MybookingController implements Initializable {
                         resultSet.getString("Time"),
                         resultSet.getString("Seat"),
                         resultSet.getInt("Total_Amount"),
-                        resultSet.getString("Date")
+                        resultSet.getString("Date"),
+                        resultSet.getInt("Customer_ID")
                 ));
 
             }
@@ -174,32 +176,18 @@ public class User_MybookingController implements Initializable {
 
     @FXML
     private void MyBooking(MouseEvent event) throws IOException, ClassNotFoundException, SQLException {
-        
-        
-        
-        
-        
-     
-        
-        
-        
-        
+
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
 
         System.out.println("conected");
 
-         
         try {
 
-           
-           
             preparedStatement = connection.prepareStatement("Select * from Booking_history Where User_name='u'");
 
             resultSet = preparedStatement.executeQuery();
-            
-            
 
             while (resultSet.next()) {
 
@@ -211,7 +199,8 @@ public class User_MybookingController implements Initializable {
                         resultSet.getString("Time"),
                         resultSet.getString("Seat"),
                         resultSet.getInt("Total_Amount"),
-                        resultSet.getString("Date")
+                        resultSet.getString("Date"),
+                        resultSet.getInt("Customer_ID")
                 ));
 
             }
@@ -222,11 +211,7 @@ public class User_MybookingController implements Initializable {
         }
 
         userbook_table.setItems(data);
-        
-        
-        
-        
-        
+
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("User_Mybooking.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
@@ -265,11 +250,11 @@ public class User_MybookingController implements Initializable {
 
     @FXML
     private void Back(MouseEvent event) throws IOException {
-        String u=User_Name.getText();
+        String u = User_Name.getText();
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
         Parent root = fxmlLoader.load();
-        
-         UserDashBoardController user=fxmlLoader.getController();
+
+        UserDashBoardController user = fxmlLoader.getController();
         user.displayName(u);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -284,5 +269,65 @@ public class User_MybookingController implements Initializable {
         User_Name.setText(name);
 
     }
+
+    @FXML
+    private void cancelBooking(ActionEvent event) throws SQLException, IOException, ClassNotFoundException {
+
+        Connection connection;
+
+        PreparedStatement psdelete = null;
+
+        //Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+        System.out.println("connected");
+        try {
+
+            
+            String u=User_Name.getText();
+            String i = ID.getText();
+
+            int intid = Integer.parseInt(i);
+            psdelete = connection.prepareStatement("DELETE FROM Booking_history WHERE Customer_ID=?");
+            psdelete.setInt(1, intid);
+            psdelete.execute();
+            System.out.println("delete Booking successful");
+
+            FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("UserDashBoard.fxml"));
+            Parent root = fxmlLoader.load();
+                        
+           
+        UserDashBoardController user = fxmlLoader.getController();
+        user.displayName(u);
+
+            
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Home Page");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    private void getSelected(MouseEvent event) {
+
+        index = userbook_table.getSelectionModel().getSelectedIndex();
+
+        if (index <= -1) {
+
+            return;
+
+        }
+        ID.setText(C_ID.getCellData(index).toString());
+
+  }
+    
+    
+    
 
 }

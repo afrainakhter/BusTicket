@@ -7,7 +7,14 @@ package busticket;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +24,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -33,14 +41,47 @@ public class Admin_earning implements Initializable {
     private NumberAxis y;
     @FXML
     private CategoryAxis x;
+ Connection connection = null;
 
+    PreparedStatement preparedStatement = null;
+
+    ResultSet resultSet = null;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        try {
+            chart();
+            // TODO
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Admin_earning.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Admin_earning.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }   
+    
+    
+    
+      public void chart() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+        preparedStatement = connection.prepareStatement("Select `Date`, `Total_Amount` From Booking_history");
+        XYChart.Series set = new XYChart.Series();
+        resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+
+            set.getData().add(new XYChart.Data(resultSet.getString(1), resultSet.getInt(2)));
+//        set.getData().add(new XYChart.Data(resultSet.getInt(1), 4));
+//        set.getData().add(new XYChart.Data(resultSet.getInt(1), 3));
+//        set.getData().add(new XYChart.Data(resultSet.getInt(1), 2));
+
+        }
+
+       IncomeChart.getData().addAll(set);
+    }
+
 
     @FXML
     private void BACK(MouseEvent event) throws IOException {
@@ -52,6 +93,7 @@ public class Admin_earning implements Initializable {
         stage.setTitle("Home Page");
         stage.setScene(scene);
         stage.show();
+        
         
     }
     

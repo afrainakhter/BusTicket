@@ -5,6 +5,7 @@
  */
 package busticket;
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -33,6 +36,12 @@ public class HomeController implements Initializable {
     private Button contact_us;
     @FXML
     private Button about_us;
+    @FXML
+    private FontAwesomeIcon RH;
+    @FXML
+    private FontAwesomeIcon AH;
+    @FXML
+    private FontAwesomeIcon CH;
 
     /**
      * Initializes the controller class.
@@ -86,7 +95,7 @@ public class HomeController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Home Page");
+        stage.setTitle("Contact Page");
         stage.setScene(scene);
         stage.show();
         
@@ -101,9 +110,59 @@ public class HomeController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("About Page");
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+
+    @FXML
+    private void registerHome(MouseEvent event) throws IOException {
+        
+        
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Home.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Home Page");
         stage.setScene(scene);
         stage.show();
+        
+        
+        
+        
+        
+    }
+
+    @FXML
+    private void aboutHome(MouseEvent event) throws IOException {
+        
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Front_AboutUS.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("ABOUT");
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+
+    @FXML
+    private void contactHome(MouseEvent event) throws IOException {
+        
+         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Front_Contact.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("CONTACT");
+        stage.setScene(scene);
+        stage.show();
+
+        
+        
+        
+        
         
     }
     

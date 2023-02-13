@@ -10,7 +10,6 @@
    <children>
       <AnchorPane layoutX="-17.0" layoutY="-3.0" prefHeight="53.0" prefWidth="1234.0" style="-fx-background-color: #f23611;">
          <children>
-            <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="27.0" layoutY="38.0" onMouseClicked="#BACK" size="2em" />
             <Button layoutX="1023.0" layoutY="-5.0" mnemonicParsing="false" onAction="#Exit" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #f23611;" text="Exit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="36.0" />
@@ -39,5 +38,10 @@
          </font>
       </Label>
       <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" layoutX="529.0" layoutY="289.0" size="17em" text="" />
+      <Label fx:id="username" layoutX="713.0" layoutY="462.0" prefHeight="10.0" prefWidth="125.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -28,11 +29,11 @@ import javafx.stage.Stage;
 public class Contact_usController implements Initializable {
 
     @FXML
-    private ComboBox<?> ChoiceBox;
+    private TextField name;
     @FXML
-    private ComboBox<?> ChoiceBox1;
+    private TextField mail;
     @FXML
-    private Label label;
+    private TextField msg;
 
     /**
      * Initializes the controller class.
@@ -45,13 +46,6 @@ public class Contact_usController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void Select(ActionEvent event) {
-    }
-
-    @FXML
-    private void Selection(ActionEvent event) {
-    }
 
     @FXML
     private void BACK(MouseEvent event) throws IOException {
@@ -64,6 +58,18 @@ public class Contact_usController implements Initializable {
         stage.setTitle("Sign up Page");
         stage.setScene(scene);
         stage.show();
+        
+        
+    }
+
+    @FXML
+    private void submit(MouseEvent event) {
+        
+        
+        
+        
+        
+        
         
         
     }

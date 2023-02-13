@@ -3488,7 +3488,7 @@ public class SeatController implements Initializable {
     }
 
     @FXML
-    private void Payment(ActionEvent event) throws IOException {
+    private void Payment(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
        
         
         String from=Place_name.getText();
@@ -3528,7 +3528,7 @@ public class SeatController implements Initializable {
         pay.date(d);
         pay.tic(tic_price);
         
-        
+        pay.getData();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Payment Page");

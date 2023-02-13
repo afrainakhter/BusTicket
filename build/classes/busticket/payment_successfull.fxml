@@ -11,7 +11,6 @@
    <children>
       <AnchorPane layoutY="-3.0" prefHeight="62.0" prefWidth="1206.0" style="-fx-background-color: #13a128;">
          <children>
-            <FontAwesomeIcon fx:id="Back" fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="27.0" layoutY="38.0" onMouseClicked="#BACK" size="2em" />
             <Button layoutX="1068.0" layoutY="1.0" mnemonicParsing="false" onAction="#Exit" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #13a128;" text="Exit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />

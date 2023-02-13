@@ -65,6 +65,14 @@
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </Text>
+            <FontAwesomeIcon fx:id="RH" fill="#0c125b" glyphName="CIRCLE" layoutX="29.0" layoutY="811.0" />
+            <FontAwesomeIcon fx:id="AH" fill="#c9c0c0" glyphName="CIRCLE" layoutX="50.0" layoutY="811.0" onMouseEntered="#aboutHome" />
+            <FontAwesomeIcon fx:id="CH" fill="#c9c0c0" glyphName="CIRCLE" layoutX="73.0" layoutY="811.0" onMouseEntered="#contactHome" />
+            <Button fx:id="booknow" layoutX="46.0" layoutY="538.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="143.0" stylesheets="@home.css" text="BOOK NOW">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

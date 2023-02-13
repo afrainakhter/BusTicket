@@ -18,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -28,16 +30,35 @@ import javafx.stage.Stage;
  */
 public class Admin implements Initializable {
 
+    @FXML
+    private MenuButton menu;
+    @FXML
+    private MenuItem item1;
+    @FXML
+    private MenuItem item2;
+
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
+         MenuButton m =new  MenuButton ();
+         MenuItem item11=new  MenuItem ("DashBoard");
+         MenuItem item12=new  MenuItem ("Logout");
+         m.getItems().addAll(item11,item12);
+         
+         
+         
+         
+         
+        
+        
         // TODO
     }    
 
-    @FXML
     private void BACK(MouseEvent event) throws IOException {
         
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("AdminLogin.fxml"));
@@ -155,6 +176,32 @@ public class Admin implements Initializable {
         
     }
 
+   
+    @FXML
+    private void dash(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Admin.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) menu.getScene().getWindow();
+        stage.setTitle("Home Page");
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+
+    @FXML
+    private void back(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("AdminLogin.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) menu.getScene().getWindow();
+        stage.setTitle("Admin Login");
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+   
    
 
     

@@ -2,6 +2,8 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -51,7 +53,6 @@
                </font>
             </Text>
             <FontAwesomeIcon fill="#fcf3f3" glyphName="COMMENTS" layoutX="41.0" layoutY="550.0" size="1.5em" />
-            <FontAwesomeIcon fill="#fcf9f9" glyphName="ARROW_LEFT" layoutX="35.0" layoutY="36.0" onMouseClicked="#BACK" size="2em" />
             <Text fill="WHITE" layoutX="91.0" layoutY="452.0" onMouseClicked="#Earning" strokeType="OUTSIDE" strokeWidth="0.0" text="Earning" wrappingWidth="195.3090564608574">
                <font>
                   <Font size="30.0" />
@@ -59,7 +60,23 @@
             </Text>
             <FontAwesomeIcon fill="#f8f8f8" glyphName="MONEY" layoutX="37.0" layoutY="453.0" size="2em" />
          </children></AnchorPane>
-      <AnchorPane layoutX="276.0" layoutY="-3.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;" />
+      <AnchorPane layoutX="276.0" layoutY="-2.0" prefHeight="79.0" prefWidth="978.0" style="-fx-background-color: #09192A;">
+         <children>
+            <MenuButton fx:id="menu" layoutX="848.0" layoutY="26.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="28.0" style="-fx-background-color: #ff9a00;" textFill="#ff9a00">
+              <items>
+                <MenuItem fx:id="item1" mnemonicParsing="false" onAction="#dash" text="DashBoard">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="DASHBOARD" size="2em" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem fx:id="item2" mnemonicParsing="false" onAction="#back" text="Logout">
+                     <graphic>
+                        <FontAwesomeIcon fill="#0d0d0d" glyphName="SIGN_OUT" size="2em" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+         </children></AnchorPane>
       <AnchorPane layoutX="327.0" layoutY="213.0" onMouseClicked="#Customer" prefHeight="177.0" prefWidth="288.0" style="-fx-background-color: white;">
          <children>
             <Label alignment="CENTER" layoutY="110.0" prefHeight="66.0" prefWidth="296.0" styleClass="Label" stylesheets="@admin.css" text="Users" textAlignment="CENTER" textFill="#fffdfa">

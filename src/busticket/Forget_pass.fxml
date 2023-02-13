@@ -31,6 +31,7 @@
                </font>
             </Text>
             <FontAwesomeIcon fill="ORANGE" glyphName="ARROW_LEFT" layoutX="33.0" layoutY="36.0" onMouseClicked="#Back" size="2em" text="" />
+            <Label fx:id="hide" layoutX="432.0" layoutY="198.0" prefHeight="23.0" prefWidth="81.0" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="599.0" layoutY="-3.0" prefHeight="807.0" prefWidth="605.0" style="-fx-background-color: #ADD8E6;">
@@ -45,17 +46,17 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="48.0" layoutY="401.0" text=" Password" textFill="#1800ff">
+            <Label layoutX="48.0" layoutY="401.0" text=" New Password" textFill="#1800ff">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="58.0" layoutY="334.0" text="Answer" textFill="#1800ff">
+            <Label layoutX="58.0" layoutY="334.0" text="OTP" textFill="#1800ff">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="58.0" layoutY="274.0" text="Security Question" textFill="#1800ff">
+            <Label layoutX="58.0" layoutY="274.0" text="Email" textFill="#1800ff">
                <font>
                   <Font size="18.0" />
                </font>
@@ -66,8 +67,8 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="Ans" layoutX="237.0" layoutY="332.0" prefHeight="33.0" prefWidth="258.0" />
-            <Button layoutX="502.0" layoutY="212.0" mnemonicParsing="false" onAction="#Search" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #4731b2;" text="Search" textFill="#fcf2f2">
+            <TextField fx:id="opt" layoutX="237.0" layoutY="332.0" prefHeight="33.0" prefWidth="258.0" />
+            <Button layoutX="502.0" layoutY="217.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #4731b2;" text="Search" textFill="#fcf2f2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -76,13 +77,13 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <TextField fx:id="ques" layoutX="237.0" layoutY="272.0" prefHeight="27.0" prefWidth="258.0" />
-            <Button layoutX="237.0" layoutY="448.0" mnemonicParsing="false" onAction="#Retrive" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: #4731b2;" text="Retrive Pass" textFill="#fcf2f2">
+            <TextField fx:id="email" layoutX="237.0" layoutY="272.0" prefHeight="27.0" prefWidth="258.0" />
+            <TextField fx:id="New_pass" layoutX="237.0" layoutY="396.0" prefHeight="33.0" prefWidth="258.0" />
+            <Button layoutX="502.0" layoutY="273.0" mnemonicParsing="false" onAction="#sendOTP" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #4731b2;" text="Send OTP" textFill="#fcf2f2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="New_pass" layoutX="237.0" layoutY="396.0" prefHeight="33.0" prefWidth="258.0" />
          </children>
       </AnchorPane>
    </children>

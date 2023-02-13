@@ -2,6 +2,8 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -51,8 +53,23 @@
          </children></AnchorPane>
       <AnchorPane layoutX="-15.0" layoutY="-3.0" prefHeight="55.0" prefWidth="1269.0" style="-fx-background-color: #C2DDF2;">
          <children>
-            <FontAwesomeIcon fx:id="Back" fill="#ff8000" glyphName="ARROW_LEFT" layoutX="28.0" layoutY="33.0" onMouseClicked="#BACK" size="2em" />
-            <FontAwesomeIcon fill="#fc8209" glyphName="EDIT" layoutX="1179.0" layoutY="41.0" onMouseClicked="#edit" size="3em" />
+            <MenuButton fx:id="menu" layoutX="1124.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #fc8209;">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#booking" text="My Booking">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="Back1" fill="#111111" glyphName="HISTORY" size="2em" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#edit" text="Edit Profile">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="EDIT" size="2em" />
+                     </graphic></MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#BACK" text="Logout">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SIGN_OUT" size="2em" />
+                     </graphic></MenuItem>
+              </items>
+            </MenuButton>
          </children></AnchorPane>
       <AnchorPane layoutX="459.0" layoutY="216.0" onMouseClicked="#TicketBooking" prefHeight="177.0" prefWidth="312.0" style="-fx-background-color: #f4f6f8;">
          <children>

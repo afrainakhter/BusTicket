@@ -10,17 +10,17 @@ package busticket;
  * @author macbookpro
  */
 public class MyBooking {
-    
+    int id;
     String user_name;
     String bus_name;
     String from;
     String to;
     String time;
     String seat_name;
-  int total_amount;
-  String date;
+      int total_amount;
+      String date;
 
-    public MyBooking(String user_name, String bus_name, String from, String to, String time, String seat_name, int total_amount, String date) {
+    public MyBooking(String user_name, String bus_name, String from, String to, String time, String seat_name, int total_amount, String date,int id) {
         this.user_name = user_name;
         this.bus_name = bus_name;
         this.from = from;
@@ -29,6 +29,15 @@ public class MyBooking {
         this.seat_name = seat_name;
         this.total_amount = total_amount;
         this.date = date;
+         this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDate() {

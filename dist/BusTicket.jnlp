@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BusTicket.jar" size="1812768" download="eager" />
+    <jar href="BusTicket.jar" size="2903745" download="eager" />
+    <jar href="lib/activation.jar" size="124332" download="eager" />
     <jar href="lib/aopalliance-1.0.jar" size="4467" download="eager" />
     <jar href="lib/bcmail-jdk14-1.38.jar" size="192035" download="eager" />
     <jar href="lib/bcmail-jdk14-138.jar" size="192035" download="eager" />
@@ -42,9 +43,11 @@
     <jar href="lib/lucene-queries-4.5.1.jar" size="205195" download="eager" />
     <jar href="lib/lucene-queryparser-4.5.1.jar" size="384884" download="eager" />
     <jar href="lib/lucene-sandbox-4.5.1.jar" size="45578" download="eager" />
+    <jar href="lib/mail-1.4.7.jar" size="521157" download="eager" />
     <jar href="lib/mysql-connector-j-8.0.31.jar" size="2515519" download="eager" />
     <jar href="lib/ojdbc14-10.2.0.2.0.jar" size="1545954" download="eager" />
     <jar href="lib/olap4j-0.9.7.309-JS-3.jar" size="445343" download="eager" />
+    <jar href="lib/smtp-1.4.4.jar" size="52195" download="eager" />
     <jar href="lib/spring-aop-3.0.6.RELEASE.jar" size="321428" download="eager" />
     <jar href="lib/spring-asm-3.0.6.RELEASE.jar" size="53082" download="eager" />
     <jar href="lib/spring-beans-3.0.6.RELEASE.jar" size="556590" download="eager" />

@@ -1,4 +1,3 @@
-
 package busticket;
 
 import java.io.IOException;
@@ -6,8 +5,11 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -61,13 +63,13 @@ public class PaymentController implements Initializable {
     private Label Busname;
     @FXML
     private Label tic;
-
+ Connection connection;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
         ObservableList<String> list1 = FXCollections.observableArrayList("Card", "Bkash");
         Payment.setItems(list1);
         // TODO
@@ -76,104 +78,102 @@ public class PaymentController implements Initializable {
     @FXML
     private void Procced_to_pay_button(ActionEvent event) throws IOException, SQLException {
 
-        
-           
-        
-        
-        
-        
         String F = FirstName.getText();
         String l = LastName.getText();
         String e = Email.getText();
         String mobile = Mobile.getText();
-        
-        String total =Total_Price.getText();
-        
-        String from= From.getText();
+
+        String total = Total_Price.getText();
+
+        String from = From.getText();
         String to = TO.getText();
         String bus = Busname.getText();
         String d = date.getText();
-        
-        String t =time.getText();
-        
-         String u =user_name.getText();
-         String s=no_of_Seat.getText();
-         String tic_price=tic.getText();
-         
-        Connection con;
-        try{
-        PreparedStatement psInsert = null;
-        
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
-        System.out.println("Connected");
 
-        psInsert = con.prepareStatement("INSERT INTO Booking_history (`First_Name`,`Last_Name`,`Bus_name`,`Date`,`Time`,`Seat`,`Total_Amount`,`User_name`,`Mobile_No`,`E-mail`,`From_bus`,`To_bus`)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
-        psInsert.setString(1, F);
-        psInsert.setString(2, l);
-        psInsert.setString(3, bus);
-        psInsert.setString(4, d);
-         psInsert.setString(5, t);
-          psInsert.setString(6, s);
-        psInsert.setString(7 ,total);
-        psInsert.setString(8, u);
-        psInsert.setString(9,mobile);
-         psInsert.setString(10, e);
-          psInsert.setString(11, from);
-        psInsert.setString(12, to);
-        
-         
-        
-        psInsert.executeUpdate();
-        m = Payment.getSelectionModel().getSelectedItem().toString();
+        String t = time.getText();
 
-        if (m == "Card") {
+        String u = user_name.getText();
+        String s = no_of_Seat.getText();
+        String tic_price = tic.getText();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Card.fxml"));
-            Parent root = fxmlLoader.load();
-            
-            
-        
-            CardController card=fxmlLoader.getController();
-            
-        // card.ticprice(tic_price);
-        
-        
-        
-            card.totalPrice(total);
-            card.busTO(to);
-            card.busfrom(from);
-            card.username(u);
-            card.date(d);
-            card.bus(bus);
-            card.time(t);
-            card.seat(s);
-            card.ticprice(tic_price);
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Sign up Page");
-            stage.setScene(scene);
-            stage.show();
+       // Connection con;
+//        try {
+//            PreparedStatement psInsert = null;
 
-        } else {
+            //con = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+           // System.out.println("Connected");
+//
+//            psInsert = con.prepareStatement("INSERT INTO Booking_history (`First_Name`,`Last_Name`,`Bus_name`,`Date`,`Time`,`Seat`,`Total_Amount`,`User_name`,`Mobile_No`,`E-mail`,`From_bus`,`To_bus`)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
+//            psInsert.setString(1, F);
+//            psInsert.setString(2, l);
+//            psInsert.setString(3, bus);
+//            psInsert.setString(4, d);
+//            psInsert.setString(5, t);
+//            psInsert.setString(6, s);
+//            psInsert.setString(7, total);
+//            psInsert.setString(8, u);
+//            psInsert.setString(9, mobile);
+//            psInsert.setString(10, e);
+//            psInsert.setString(11, from);
+//            psInsert.setString(12, to);
 
-            
-            FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Bkash.fxml"));
-            Parent root = fxmlLoader.load();
-             BkashController bkash =fxmlLoader.getController();
-             bkash.totalPrice(total);
-            
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Sign up Page");
-            stage.setScene(scene);
-            stage.show();
+            //psInsert.executeUpdate();
+            m = Payment.getSelectionModel().getSelectedItem().toString();
 
-        }}
-        catch(SQLException yu){
-            yu.printStackTrace();
-        
-        }
+            if (m == "Card") {
 
+                FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Card.fxml"));
+                Parent root = fxmlLoader.load();
+
+                CardController card = fxmlLoader.getController();
+
+                // card.ticprice(tic_price);
+                card.totalPrice(total);
+                card.busTO(to);
+                card.busfrom(from);
+                card.username(u);
+                card.date(d);
+                card.bus(bus);
+                card.time(t);
+                card.seat(s);
+                card.ticprice(tic_price);
+                card.FN(F);
+                card.Email(e);
+                card.LN(l);
+                card.Mobile(mobile);
+                
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("Sign up Page");
+                stage.setScene(scene);
+                stage.show();
+
+            } else {
+
+                FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Bkash.fxml"));
+                Parent root = fxmlLoader.load();
+                BkashController bkash = fxmlLoader.getController();
+                bkash.totalPrice(total);
+                bkash.username(u);
+                bkash.bus(bus);
+                bkash.busTO(to);
+                bkash.busfrom(from);
+                bkash.date(d);
+                bkash.time(t);
+                bkash.seat(s);
+
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("Sign up Page");
+                stage.setScene(scene);
+                stage.show();
+
+            }
+//        } catch (SQLException yu) {
+//            yu.printStackTrace();
+//
+//        }
+    //}
     }
 
     @FXML
@@ -192,20 +192,19 @@ public class PaymentController implements Initializable {
     @FXML
     private void Back(MouseEvent event) throws IOException, SQLException {
 
-        String from=From.getText();
-        String to=TO.getText();
-        String d=date.getText();
-        String b=Busname.getText();
-        String tic_price=tic.getText();
-        String u=user_name.getText();
-        String departure_time=time.getText();
-        String s=no_of_Seat.getText();  
-                
-        
+        String from = From.getText();
+        String to = TO.getText();
+        String d = date.getText();
+        String b = Busname.getText();
+        String tic_price = tic.getText();
+        String u = user_name.getText();
+        String departure_time = time.getText();
+        String s = no_of_Seat.getText();
+
         FXMLLoader fxmlLoader = new FXMLLoader(BusTicket.class.getResource("Seat.fxml"));
         Parent root = fxmlLoader.load();
-        
-         SeatController seat = fxmlLoader.getController();
+
+        SeatController seat = fxmlLoader.getController();
 
         seat.show_PlaceName_from(from);
         seat.show_PlaceName_to(to);
@@ -216,65 +215,158 @@ public class PaymentController implements Initializable {
         seat.username(u);
         seat.no_of_seat(s);
         seat.getred();
-       
-        
+
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Sign up Page");
         stage.setScene(scene);
         stage.show();
     }
-    
-    public void totalPrice(String totalprice){
-    
-       Total_Price.setText(totalprice);
-    
+
+    public void totalPrice(String totalprice) {
+
+        Total_Price.setText(totalprice);
+
+    }
+
+    public void user_name(String name) {
+
+        user_name.setText(name);
+
+    }
+
+    public void F(String from) {
+
+        From.setText(from);
+
+    }
+
+    public void To(String to) {
+
+        TO.setText(to);
+
+    }
+
+    public void date(String datE) {
+
+        date.setText(datE);
+
+    }
+
+    public void Time(String t) {
+
+        time.setText(t);
+
+    }
+
+    public void Seat(String seat) {
+
+        no_of_Seat.setText(seat);
+
+    }
+
+    public void bus(String b) {
+
+        Busname.setText(b);
+
+    }
+
+    public void tic(String T) {
+
+        tic.setText(T);
+
     }
     
-    public void user_name(String name){
+    public void getData() throws ClassNotFoundException, SQLException{
+      PreparedStatement ps=null;
+        
+        ResultSet resultset;
+
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+        System.out.println("Connected");
+
+
+          String u = user_name.getText();
+          
+           Class.forName("com.mysql.cj.jdbc.Driver");
+            String sql = "select FirstName,LastName,mobile,email from login where user_name=?";
+              ps = connection.prepareStatement(sql);
+             ps.setString(1, u);
+             resultset = ps.executeQuery();
+             
+               if (resultset.next()) {
+
+                 FirstName.setText(resultset.getString(1));
+                  LastName.setText(resultset.getString(2));
+                   Mobile.setText(resultset.getString(3));
+                    Email.setText(resultset.getString(4));
+                  
+                   ps.close();
+                resultset.close();
+          
+               }
+               
+               else{
+               
+                   System.out.println("Error");
+               
+               }
     
-      user_name.setText(name);
-    
+               
+              
+               
+               
     }
+//    public void paymentcomplete() throws SQLException{
+//        
+//         String F = FirstName.getText();
+//        String l = LastName.getText();
+//        String e = Email.getText();
+//        String mobile = Mobile.getText();
+//
+//        String total = Total_Price.getText();
+//
+//        String from = From.getText();
+//        String to = TO.getText();
+//        String bus = Busname.getText();
+//        String d = date.getText();
+//
+//        String t = time.getText();
+//
+//        String u = user_name.getText();
+//        String s = no_of_Seat.getText();
+//        String tic_price = tic.getText();
+//
+//        Connection con;
+//     try {
+//            PreparedStatement psInsert = null;
+//
+//            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/User_login", "root", "12345678");
+//            System.out.println("Connected");
+//
+//            psInsert = con.prepareStatement("INSERT INTO Booking_history (`First_Name`,`Last_Name`,`Bus_name`,`Date`,`Time`,`Seat`,`Total_Amount`,`User_name`,`Mobile_No`,`E-mail`,`From_bus`,`To_bus`)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
+//            psInsert.setString(1, F);
+//            psInsert.setString(2, l);
+//            psInsert.setString(3, bus);
+//            psInsert.setString(4, d);
+//            psInsert.setString(5, t);
+//            psInsert.setString(6, s);
+//            psInsert.setString(7, total);
+//            psInsert.setString(8, u);
+//            psInsert.setString(9, mobile);
+//            psInsert.setString(10, e);
+//            psInsert.setString(11, from);
+//            psInsert.setString(12, to);
+//
+//            psInsert.executeUpdate();
+//    
+//    }catch (SQLException yu) {
+//            yu.printStackTrace();
+//
+//        }}
+//    
+//    
+//    
     
-    public void F(String from){
-    
-      From.setText(from);
-    
-    }
-    
-    public void To(String to){
-    
-      TO.setText(to);
-    
-    }
-    
-    public void date(String datE){
-    
-    date.setText(datE);
-    
-    }
-    public void Time(String t){
-    
-      time.setText(t);
-    
-    }
-    public void Seat(String seat){
-    
-      no_of_Seat.setText(seat);
-    
-    }
-    
-     public void bus(String b){
-    
-      Busname.setText(b);
-    
-    }
-     
-     public void tic(String T){
-     
-     tic.setText(T);
-     
-     }
 
 }
